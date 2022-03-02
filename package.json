@@ -5,9 +5,9 @@
     "npm": "^6.14.13"
   },
   "scripts": {
-    "dev": "next -p 4000",
+    "dev": "next -p 3100",
     "build": "next build",
-    "start": "next start -p 4000",
+    "start": "next start -p 3100",
     "lint": "next lint",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "locales": "npx prettier --write ./src/i18n/**/*.json",
