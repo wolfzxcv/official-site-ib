@@ -1,14 +1,23 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import '@/styles/index.css'; // global styling
+import '@/styles/nprogress.css'; //styles of nprogress
+import theme from '@/styles/theme';
+import { ChakraProvider } from '@chakra-ui/react';
+import { appWithTranslation } from 'next-i18next';
+import { AppProps } from 'next/app';
+import Router from 'next/router';
+import NProgress from 'nprogress'; //npro
 
-import theme from '../theme'
-import { AppProps } from 'next/app'
+//Binding events.
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider resetCSS theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
-  )
-}
+  );
+};
 
-export default MyApp
+export default appWithTranslation(MyApp);
