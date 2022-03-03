@@ -8,6 +8,10 @@ export type Header = {
   login: string;
   /** register */
   register: string;
+  /** menu */
+  menu: string;
+  /** language */
+  language: string;
   /** home */
   home: string;
   /** feature */

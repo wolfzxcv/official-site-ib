@@ -11,7 +11,7 @@ const DesktopHeader: React.FC<{}> = () => {
   const { t } = useTranslation('header');
 
   return (
-    <Flex flexDir="column">
+    <Flex flexDir="column" borderBottom="1px">
       <Flex
         bg="#e2e2e2"
         height="55px"
