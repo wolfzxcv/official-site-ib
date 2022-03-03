@@ -1,5 +1,6 @@
 import { IMenuItem, menuList } from '@/assets/menuList';
 import { Locales } from '@/i18n/config';
+import { openChatWindow } from '@/utils';
 import {
   Box,
   Drawer,
@@ -12,7 +13,7 @@ import {
 import { useTranslation } from 'next-i18next';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 type MobileNavProps = {
@@ -25,6 +26,11 @@ const MobileNav: React.FC<MobileNavProps> = ({
   onClose
 }: MobileNavProps) => {
   const { t } = useTranslation('header');
+
+  const handleClose = () => {
+    onClose();
+    openChatWindow();
+  };
 
   return (
     <Drawer
@@ -44,11 +50,16 @@ const MobileNav: React.FC<MobileNavProps> = ({
           <Flex flexDirection="column">
             {menuList.map((each) => (
               <MobileNavItem
-                key={each.href}
+                key={each.i18n}
                 i18n={each.i18n}
                 href={each.href}
               />
             ))}
+            <MobileNavItemBase
+              uppercase
+              i18n="liveChat"
+              onClick={handleClose}
+            />
           </Flex>
         </DrawerBody>
       </DrawerContent>
@@ -57,13 +68,32 @@ const MobileNav: React.FC<MobileNavProps> = ({
 };
 
 const MobileNavItem: React.FC<IMenuItem> = ({ i18n, href }: IMenuItem) => {
-  const { t } = useTranslation('header');
   const router = useRouter();
   const currentLang = router.locale as Locales;
 
   return (
     <NextLink passHref={true} href={href} locale={currentLang}>
+      <MobileNavItemBase i18n={i18n} />
+    </NextLink>
+  );
+};
+
+type MobileNavItemBaseProps = {
+  uppercase?: boolean;
+  i18n: IMenuItem['i18n'];
+  onClick?: () => void;
+};
+
+const MobileNavItemBase = forwardRef<HTMLDivElement, MobileNavItemBaseProps>(
+  (
+    { uppercase = false, i18n, onClick, ...rest }: MobileNavItemBaseProps,
+    ref
+  ) => {
+    const { t } = useTranslation('header');
+    return (
       <Box
+        ref={ref}
+        {...rest}
         _hover={{
           cursor: 'pointer',
           bg: '#e2e2e2',
@@ -73,11 +103,14 @@ const MobileNavItem: React.FC<IMenuItem> = ({ i18n, href }: IMenuItem) => {
         py="2"
         transition={'all .5s ease'}
         fontWeight={700}
+        onClick={onClick}
       >
-        {t(i18n)}
+        {uppercase ? t(i18n).toUpperCase() : t(i18n)}
       </Box>
-    </NextLink>
-  );
-};
+    );
+  }
+);
+
+MobileNavItemBase.displayName = 'MobileNavItemBase';
 
 export default MobileNav;

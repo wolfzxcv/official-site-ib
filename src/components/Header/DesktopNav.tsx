@@ -10,7 +10,7 @@ const DesktopNav: React.FC<{}> = () => {
   return (
     <Flex>
       {menuList.map((each) => (
-        <DesktopNavItem key={each.href} i18n={each.i18n} href={each.href} />
+        <DesktopNavItem key={each.i18n} i18n={each.i18n} href={each.href} />
       ))}
     </Flex>
   );

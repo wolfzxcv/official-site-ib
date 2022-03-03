@@ -132,7 +132,7 @@ type ClickLinkProps = {
   color?: string;
 };
 
-const ClickLink: React.FC<ClickLinkProps> = ({
+export const ClickLink: React.FC<ClickLinkProps> = ({
   href,
   onClick,
   text,
