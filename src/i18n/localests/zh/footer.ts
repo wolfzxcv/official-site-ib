@@ -1,20 +1,12 @@
 import { Footer } from '../@types/footer';
 
 export const footer: Footer = {
-  copyright: '© WCG Markets Ltd 版權所有，不得轉載',
   privacyPolicy: '隱私條款',
   termsAndConditions: '條款細則',
   disputeSettlement: '爭端處理',
   riskDisclaimer: '免責申明',
   amlPolicy: '防止洗黑錢條款',
-  followUs: '關注我們',
-  provideYouWith: '憑藉業內最專業的經驗為您提供優質的投資服務',
-  allTradesInvolveRisks: '所有交易均涉及風險，您的損失可能大於您的入金。',
-  newbiesGettingStarted: '新手入門',
-  getUSD: '免費獲得 100,000 美元的模擬資金',
-  demoAccount: '開立模擬帳戶',
-  startRealFXTrading: '開始真實的外匯交易',
-  aRealAccount: '開立真實帳戶',
+  followUs: '跟隨我們',
   WCGIsABusinessBrand: 'WCG是由多家公司共同使用的業務品牌，包括：',
   WCGMarketsLtdIsALimitedLiabilityCompany:
     'WCG Markets Ltd 是位於聖文森特和格林納丁斯依據國際商業公司法注冊的有限責任公司，公司編號為 26087 BC 2020。註冊地址是：The Financial Services Centre Stoney Ground, Kingstown, St.Vincent & the Grenadines.',

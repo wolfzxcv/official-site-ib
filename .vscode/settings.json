@@ -8,5 +8,13 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["Chakra", "localests", "nprogress"]
+  "cSpell.words": [
+    "Chakra",
+    "FINTRAC",
+    "localests",
+    "nprogress",
+    "WCGIs",
+    "wechat",
+    "Weibo"
+  ]
 }

@@ -1,20 +1,12 @@
 import { Footer } from '../@types/footer';
 
 export const footer: Footer = {
-  copyright: '© WCG Markets Ltd 版权所有，不得转载',
   privacyPolicy: '隐私条款',
   termsAndConditions: '条款细则',
   disputeSettlement: '争端处理',
   riskDisclaimer: '免责申明',
   amlPolicy: '防止洗黑钱条款',
-  followUs: '关注我们',
-  provideYouWith: '凭借业内最专业的经验为您提供优质的投资服务',
-  allTradesInvolveRisks: '所有交易均涉及风险，您的损失可能大于您的入金。',
-  newbiesGettingStarted: '新手入门',
-  getUSD: '免费获得 100,000 美元的模拟资金',
-  demoAccount: '开立模拟账户',
-  startRealFXTrading: '开始真实的外汇交易',
-  aRealAccount: '开立真实账户',
+  followUs: '跟随我们',
   WCGIsABusinessBrand: 'WCG是由多家公司共同使用的业务品牌，包括：',
   WCGMarketsLtdIsALimitedLiabilityCompany:
     'WCG Markets Ltd 是位于圣文森特和格林纳丁斯群岛St.Vincent依据国际商业公司法注册的有限责任公司，公司编号为26087 BC 2020。注册地址是： The Financial Services Centre Stoney Ground, Kingstown, St.Vincent & the Grenadines.',

@@ -1,22 +1,12 @@
 import { Footer } from '../@types/footer';
 
 export const footer: Footer = {
-  copyright: '© WCG All rights reserved, no reprint',
   privacyPolicy: 'Privacy Policy',
   termsAndConditions: 'Terms and Conditions',
   disputeSettlement: 'Dispute Settlement',
   riskDisclaimer: 'Risk Disclaimer',
   amlPolicy: 'AML Policy',
   followUs: 'Follow us',
-  provideYouWith:
-    'Provide you with high-quality investment services with the most professional experience in the industry',
-  allTradesInvolveRisks:
-    'Risk policy: All trades involve risks. Your trading loss may be greater than your total deposit.',
-  newbiesGettingStarted: 'Newbies Getting Started',
-  getUSD: 'Get USD 100,000 virtual funds for demo account',
-  demoAccount: 'demo account',
-  startRealFXTrading: 'Start Real FX Trading',
-  aRealAccount: 'a real account',
   WCGIsABusinessBrand:
     'WCG is a business brand jointly shared by many companies, including:',
   WCGMarketsLtdIsALimitedLiabilityCompany:
