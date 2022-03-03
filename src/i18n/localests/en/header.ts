@@ -1,10 +1,13 @@
 import { Header } from '../@types/header';
 
 export const header: Header = {
-  home: 'Home',
-  feature: 'Feature',
-  agent: 'Agent',
-  promotion: 'Promotion',
-  activity: 'Activity',
-  contact: 'Contact Us'
+  liveChat: 'Live Chat',
+  login: 'Login',
+  register: 'Register',
+  home: 'HOME',
+  feature: 'FEATURE',
+  agent: 'AGENT',
+  promotion: 'PROMOTION',
+  activity: 'ACTIVITY',
+  contact: 'CONTACT US'
 };

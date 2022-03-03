@@ -50,7 +50,6 @@ const privacyPolicy: React.FC<{}> = () => {
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale!, [
-      'common',
       'footer',
       'conditions',
       'header'

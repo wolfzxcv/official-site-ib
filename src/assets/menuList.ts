@@ -1,5 +1,7 @@
+import { Header } from '@/i18n/localests/@types/header';
+
 export type IMenuItem = {
-  i18n: string;
+  i18n: keyof Header;
   href: string;
 };
 
@@ -10,22 +12,22 @@ export const menuList: IMenuItem[] = [
   },
   {
     i18n: 'feature',
-    href: '/feature'
+    href: '/'
   },
   {
     i18n: 'agent',
-    href: '/agent'
+    href: '/'
   },
   {
     i18n: 'promotion',
-    href: '/promotion'
+    href: '/'
   },
   {
     i18n: 'activity',
-    href: '/activity'
+    href: '/'
   },
   {
     i18n: 'contact',
-    href: '/contact'
+    href: '/'
   }
 ];

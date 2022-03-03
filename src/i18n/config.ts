@@ -18,7 +18,7 @@ type localesOptions = {
 };
 
 export const localesOptions: localesOptions[] = [
-  { code: 'cn', value: '简体' },
+  { code: 'cn', value: '简体中文' },
   { code: 'en', value: 'English' },
-  { code: 'zh', value: '繁體' }
+  { code: 'zh', value: '繁體中文' }
 ];

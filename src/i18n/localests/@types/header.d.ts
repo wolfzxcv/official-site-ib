@@ -2,6 +2,12 @@ export type Header = {
   /********
    * header
    ********/
+  /** live chat */
+  liveChat: string;
+  /** login */
+  login: string;
+  /** register */
+  register: string;
   /** home */
   home: string;
   /** feature */
