@@ -69,13 +69,19 @@ const ProductsEach: React.FC<ProductsEachProps> = ({
       flexDir="column"
       width={{ base: '85vw', md: '25%' }}
       pr={{ base: 0, md: 10 }}
-      pb={{ base: 10, md: 0 }}
+      pb={{ base: '50px', md: 0 }}
       align={{ base: 'start', md: 'center' }}
     >
       <Box width="30px" height="30px">
         <Image src={imageSrc} alt={text} />
       </Box>
-      <Box fontSize={{ base: '24px', md: '36px' }} fontWeight="700">
+      <Box
+        fontSize={{ base: '24px', md: '36px' }}
+        fontWeight="700"
+        width="100%"
+        my={2}
+        textAlign={{ base: 'left', md: 'center' }}
+      >
         {title}
       </Box>
       <Box>{text}</Box>

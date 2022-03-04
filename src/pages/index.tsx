@@ -1,19 +1,27 @@
-import Banner from '@/components/Banner/Banner';
-import WCG15ZJ from '@/components/Banner/WCG15ZJ';
 import Wrapper from '@/components/Base/Wrapper';
-import Carousel from '@/components/Carousel/Carousel';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
-import Products from '@/components/Home/Products';
+import { Flex } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import dynamic from 'next/dynamic';
+
+const Products = dynamic(() => import('@/components/Home/Products'), {
+  ssr: false
+});
 
 const Index: React.FC<{}> = () => {
-  const sliders = [<WCG15ZJ key="WCG15ZJ" />, <Banner key="Banner" />];
-
   return (
     <Wrapper>
-      <Carousel defaultSlider={<Banner key="Banner" />} sliders={sliders} />
-
+      <Flex
+        width="100%"
+        height="300px"
+        bg="#041c27"
+        justify="center"
+        align="center"
+        color="white"
+      >
+        banner
+      </Flex>
       {/* $25up no limit */}
       <HorizontalStrip />
 

@@ -11,22 +11,30 @@ const ConditionLinks: React.FC<{}> = () => {
         text={t('privacyPolicy')}
         href="/conditions/privacyPolicy"
       />
-      <Box mx="1">|</Box>
+      <Box mx={1} my={2}>
+        |
+      </Box>
       <ConditionLink
         text={t('termsAndConditions')}
         href="/conditions/termsAndConditions"
       />
-      <Box mx="1">|</Box>
+      <Box mx={1} my={2}>
+        |
+      </Box>
       <ConditionLink
         text={t('disputeSettlement')}
         href="/conditions/disputeSettlement"
       />
-      <Box mx="1">|</Box>
+      <Box mx={1} my={2}>
+        |
+      </Box>
       <ConditionLink
         text={t('riskDisclaimer')}
         href="/conditions/riskDisclaimer"
       />
-      <Box mx="1">|</Box>
+      <Box mx={1} my={2}>
+        |
+      </Box>
       <ConditionLink text={t('amlPolicy')} href="/conditions/amlPolicy" />
     </Flex>
   );
@@ -45,6 +53,7 @@ const ConditionLink: React.FC<ConditionLinkProps> = ({
     <Box
       textDecoration="underline"
       mx={1}
+      my={2}
       _hover={{
         textDecoration: 'none',
         color: 'white',
