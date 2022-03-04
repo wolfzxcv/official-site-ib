@@ -102,7 +102,7 @@ const MobileNavItemBase = forwardRef<HTMLDivElement, MobileNavItemBaseProps>(
         px="5"
         py="2"
         transition={'all .5s ease'}
-        fontWeight={700}
+        fontWeight="700"
         onClick={onClick}
       >
         {uppercase ? t(i18n).toUpperCase() : t(i18n)}

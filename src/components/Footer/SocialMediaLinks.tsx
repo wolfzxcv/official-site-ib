@@ -7,7 +7,7 @@ const SocialMediaLinks: React.FC<{}> = () => {
   const { t } = useTranslation('footer');
   return (
     <Flex flexDirection="column" display={{ base: 'none', md: 'block' }}>
-      <Box mb={1}>{t('followUs')}</Box>
+      <Box mb="1">{t('followUs')}</Box>
       <Flex>
         <Link
           _hover={{
@@ -15,8 +15,8 @@ const SocialMediaLinks: React.FC<{}> = () => {
             transition: '1s',
             borderRadius: '10px'
           }}
-          p={1}
-          mx={1}
+          p="1"
+          mx="1"
           href={links.facebook}
           isExternal
         >
@@ -34,8 +34,8 @@ const SocialMediaLinks: React.FC<{}> = () => {
             transition: '1s',
             borderRadius: '10px'
           }}
-          p={1}
-          mx={1}
+          p="1"
+          mx="1"
           href={links.instagram}
           isExternal
         >
@@ -53,8 +53,8 @@ const SocialMediaLinks: React.FC<{}> = () => {
             transition: '1s',
             borderRadius: '10px'
           }}
-          p={1}
-          mx={1}
+          p="1"
+          mx="1"
           href={links.weibo}
           isExternal
         >
@@ -72,8 +72,8 @@ const SocialMediaLinks: React.FC<{}> = () => {
             transition: '1s',
             borderRadius: '10px'
           }}
-          p={1}
-          mx={1}
+          p="1"
+          mx="1"
           href={links.wechat}
           isExternal
         >

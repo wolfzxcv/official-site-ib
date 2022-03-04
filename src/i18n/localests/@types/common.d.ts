@@ -2,36 +2,40 @@ export type Common = {
   /********
    * common
    ********/
-  /** Open real account */
-  openRealAccount: string;
-  /** Open demo account */
-  openDemoAccount: string;
-  /** Users' Center */
-  usersCenter: string;
-  /** Users' Center New */
-  usersCenterNew: string;
-  /** Users' Center Old */
-  usersCenterOld: string;
-  /** IB Center */
-  iBCenter: string;
-  /** IB Center New */
-  iBCenterNew: string;
-  /** IB Center Old */
-  iBCenterOld: string;
-  /** contactUs */
-  contactUs: string;
-  /** telegram */
-  telegram: string;
-  /** online */
-  online: string;
-  /** whatsApp */
-  whatsApp: string;
-  /** line */
-  line: string;
-  /** clientPortal */
-  clientPortal: string;
-  /** downloadMT4 */
-  downloadMT4: string;
-  /** top */
-  top: string;
+  /** up */
+  up: string;
+  /** no limit */
+  noLimit: string;
+  /** fee */
+  fee: string;
+  /** hour */
+  hour: string;
+  /** live chat */
+  liveChat: string;
+  /** safe */
+  safe: string;
+  /** instant */
+  instant: string;
+  /** withdrawal */
+  withdrawal: string;
+  /** startNow */
+  startNow: string;
+  /** products */
+  products: string;
+  /** forex */
+  forex: string;
+  /** offer more than */
+  offerMoreThan: string;
+  /** precious metal */
+  preciousMetal: string;
+  /** gold silver */
+  goldSilver: string;
+  /** energy */
+  energy: string;
+  /** Crude oil is not only */
+  crudeOilIsNotOnly: string;
+  /** index */
+  index: string;
+  /** offer various indexes */
+  offerVariousIndexes: string;
 };

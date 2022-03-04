@@ -102,7 +102,7 @@ const MobileLangSelector: React.FC<MobileLangSelectorProps> = ({
               }}
               px="5"
               py="2"
-              transition={'all .5s ease'}
+              transition="all .5s ease"
               fontWeight={700}
               color={currentLang === locale ? 'red.600' : 'inherit'}
             >

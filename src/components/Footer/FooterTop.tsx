@@ -15,6 +15,7 @@ export const FooterTop: React.FC<FooterTopProps> = ({
       <Flex
         minH="100px"
         width="90vw"
+        maxW="1100px"
         alignItems="center"
         justify="space-between"
         borderTop="1px"

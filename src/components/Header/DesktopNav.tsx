@@ -31,8 +31,8 @@ const DesktopNavItem: React.FC<IMenuItem> = ({ i18n, href }: IMenuItem) => {
         }}
         px="5"
         py="2"
-        transition={'all .5s ease'}
-        fontWeight={700}
+        transition="all .5s ease"
+        fontWeight="700"
       >
         {t(i18n)}
       </Box>

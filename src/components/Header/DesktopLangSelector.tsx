@@ -100,9 +100,9 @@ const DesktopLangSelector: React.FC<{}> = () => {
           </MenuButton>
           <MenuList
             minW="90px"
-            zIndex={3}
+            zIndex="3"
             borderRadius="0px"
-            p={0}
+            p="0"
             border="1px"
             borderColor="#919191"
           >
@@ -114,7 +114,7 @@ const DesktopLangSelector: React.FC<{}> = () => {
                   bgColor: '#CBD5E0'
                 }}
               >
-                <Text display={'block'} fontWeight="600">
+                <Text display="block" fontWeight="600">
                   {localesOptions.find((x) => x.code === locale)?.value ||
                     locale}
                 </Text>

@@ -19,7 +19,7 @@ const DesktopHeader: React.FC<{}> = () => {
         borderBottom="1px"
         borderColor="#a9a9a9"
       >
-        <Flex borderLeft="1px" borderRight="1px" borderColor="#a9a9a9" px={5}>
+        <Flex borderLeft="1px" borderRight="1px" borderColor="#a9a9a9" px="5">
           <DownloadLink
             href={links.mt4Android}
             imageSrc="../assets/images/google_play.png"
@@ -75,7 +75,7 @@ const DesktopHeader: React.FC<{}> = () => {
           height="80px"
           justify="space-between"
           align="center"
-          width={'80vw'}
+          width="80vw"
           maxW="1000px"
           minW="835px"
         >
