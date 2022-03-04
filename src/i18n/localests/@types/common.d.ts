@@ -38,4 +38,26 @@ export type Common = {
   index: string;
   /** offer various indexes */
   offerVariousIndexes: string;
+  /** The world's top */
+  TheWorldsTop: string;
+  /** You will have */
+  YouWilHave: string;
+  /** Partner with top */
+  PartnerWithTop: string;
+  /** Powered by WCG Markets */
+  PoweredByWCGMarkets: string;
+  /** Provides state-of-the-art */
+  ProvidesStateOfTheArt: string;
+  /** We bring you the best */
+  WeBringYouTheBest: string;
+  /** liquidity provider */
+  liquidityProvider: string;
+  /** Buying rate */
+  BuyingRate: string;
+  /** Selling rate */
+  SellingRate: string;
+  /** spread */
+  spread: string;
+  /** Client */
+  Client: string;
 };

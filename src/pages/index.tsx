@@ -1,5 +1,6 @@
 import Wrapper from '@/components/Base/Wrapper';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
+import RedBlock from '@/components/Home/RedBlock';
 import { Flex } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -27,6 +28,13 @@ const Index: React.FC<{}> = () => {
 
       {/* Products */}
       <Products />
+
+      {/* The world's top liquidity traders provide quotations */}
+      <RedBlock />
+
+      <Flex width="100%" height="300px" justify="center" align="center">
+        9 pics
+      </Flex>
     </Wrapper>
   );
 };

@@ -18,7 +18,7 @@ export const FooterTop: React.FC<FooterTopProps> = ({
         maxW="1100px"
         alignItems="center"
         justify="space-between"
-        borderTop="1px"
+        borderTop={{ base: 'none', md: '1px' }}
         borderBottom="1px"
         borderColor={borderColor}
       >
