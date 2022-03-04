@@ -14,7 +14,7 @@ export const common: Common = {
   forex: 'Forex',
   offerMoreThan:
     'Offer more than 20 currency pairs, including major currency pair, minor currency pair and other currency pairs.',
-  preciousMetal: 'Precious Metal',
+  preciousMetal: 'Metal',
   goldSilver:
     'Gold and silver are very attractive alternative investments, market liquidity is high.',
   energy: 'Energy',
