@@ -1,11 +1,16 @@
+import { Locales } from '@/i18n/config';
 import { Box, Flex, Image, Stack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 type RedBlockProps = {};
 
 const RedBlock: React.FC<RedBlockProps> = () => {
   const { t } = useTranslation('common');
+
+  const router = useRouter();
+  const currentLang = router.locale as Locales;
   return (
     <Flex
       bg="#b81c22"
@@ -20,12 +25,17 @@ const RedBlock: React.FC<RedBlockProps> = () => {
         wrap="wrap-reverse"
         justify="space-between"
       >
-        <Flex flexDir="column" width={{ base: '100%', md: '50%' }}>
+        <Flex
+          flexDir="column"
+          width={{ base: '100%', md: '50%' }}
+          justify={{ base: 'auto', md: 'center' }}
+          my={{ base: 10, md: 0 }}
+        >
           <Box
             fontSize={{ base: '24px', md: '36px' }}
             fontWeight="700"
             pb={{ base: 5, md: 10 }}
-            textAlign={{ base: 'center', md: 'left' }}
+            textAlign={'left'}
           >
             {t('TheWorldsTop')}
           </Box>
@@ -47,7 +57,12 @@ const RedBlock: React.FC<RedBlockProps> = () => {
           </Stack>
           <Box>{t('WeBringYouTheBest')}</Box>
         </Flex>
-        <Flex>PIC</Flex>
+        <Flex width={{ base: '100%', md: '50%' }} my={{ base: 10, md: 0 }}>
+          <Image
+            src={`../assets/images/home_red_block_${currentLang}.png`}
+            alt="home_red_block_pic"
+          />
+        </Flex>
       </Flex>
     </Flex>
   );

@@ -61,7 +61,7 @@ const disputeSettlement: React.FC<{}> = () => {
               <Link href={`mailto: ${links.email}`}>{`${links.email}`}</Link>
             </Text>
             <Text>{t('headOfCompliance')}</Text>
-            <Text>WCG Markets Ltd</Text>
+            <Text>WCG Markets</Text>
             <Text>{t('weTargetToResolve')}</Text>
           </Box>
         </Box>

@@ -8,9 +8,9 @@ const FooterBottom: React.FC<{}> = () => {
   return (
     <Flex justify="center" py="10">
       <Stack spacing="3" width="90vw" maxW="1100px">
-        <Box>{t('WCGMarketsLtdIsALimitedLiabilityCompany')}</Box>
+        <Box>{t('WCGMarketsIsALimitedLiabilityCompany')}</Box>
 
-        <Box>{t('WCGMarketsLtdIsRegulatedByTheFINTRAC')}</Box>
+        <Box>{t('WCGMarketsIsRegulatedByTheFINTRAC')}</Box>
 
         <Box>{t('WCGGlobalLtd')}</Box>
 

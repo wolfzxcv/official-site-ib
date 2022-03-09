@@ -16,10 +16,10 @@ export type Footer = {
   followUs: string;
   /** WCGIsABusinessBrand */
   WCGIsABusinessBrand: string;
-  /** WCGMarketsLtdIsALimitedLiabilityCompany */
-  WCGMarketsLtdIsALimitedLiabilityCompany: string;
-  /** WCGMarketsLtdIsRegulatedByTheFINTRAC */
-  WCGMarketsLtdIsRegulatedByTheFINTRAC: string;
+  /** WCGMarketsIsALimitedLiabilityCompany */
+  WCGMarketsIsALimitedLiabilityCompany: string;
+  /** WCGMarketsIsRegulatedByTheFINTRAC */
+  WCGMarketsIsRegulatedByTheFINTRAC: string;
   /** WCGGlobalLtd */
   WCGGlobalLtd: string;
   /** HighRiskInvestmentWarning */

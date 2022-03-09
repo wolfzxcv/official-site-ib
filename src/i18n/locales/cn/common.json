@@ -22,10 +22,5 @@
   "PartnerWithTop": "与顶级流动性提供商合作",
   "PoweredByWCGMarkets": "由 WCG MARKETS 金融技术公司提供支持",
   "ProvidesStateOfTheArt": "提供最先进的连接服务器",
-  "WeBringYouTheBest": "我们为您带来最佳的市场广度和深度的流动性。 我们的智能订单路由利用 WCG MARKETS 的最先进的定价引擎来支持多层最佳买/卖的汇总，从而以深层流动性池中可用的最佳价格执行您的订单。 这使您能够以真正具有竞争力的价格交易广泛的市场。",
-  "liquidityProvider": "流动性提供商",
-  "BuyingRate": "买入价",
-  "SellingRate": "卖出价",
-  "spread": "点差",
-  "Client": "客户交易端"
+  "WeBringYouTheBest": "我们为您带来最佳的市场广度和深度的流动性。 我们的智能订单路由利用 WCG MARKETS 的最先进的定价引擎来支持多层最佳买/卖的汇总，从而以深层流动性池中可用的最佳价格执行您的订单。 这使您能够以真正具有竞争力的价格交易广泛的市场。"
 }

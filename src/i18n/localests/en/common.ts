@@ -29,10 +29,5 @@ export const common: Common = {
   PoweredByWCGMarkets: 'Powered by WCG MARKETS Financial Technology Company',
   ProvidesStateOfTheArt: 'Provides state-of-the-art connection servers',
   WeBringYouTheBest:
-    "We bring you the best market breadth and depth of liquidity. Our smart order routing leverages WCG MARKETS' state-of-the-art pricing engine to support multi-tier aggregation of best bids/asks to execute your orders at the best prices available in deep liquidity pools. This enables you to trade a wide range of markets at truly competitive prices.",
-  liquidityProvider: 'Liquidity provider',
-  BuyingRate: 'Buying rate',
-  SellingRate: 'Selling rate',
-  spread: 'spread',
-  Client: 'Client'
+    "We bring you the best market breadth and depth of liquidity. Our smart order routing leverages WCG Markets' state-of-the-art pricing engine to support multi-tier aggregation of best bids/asks to execute your orders at the best prices available in deep liquidity pools. This enables you to trade a wide range of markets at truly competitive prices."
 };

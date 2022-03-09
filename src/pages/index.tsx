@@ -1,5 +1,6 @@
 import Wrapper from '@/components/Base/Wrapper';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
+import MediaAwards from '@/components/Home/MediaAwards';
 import RedBlock from '@/components/Home/RedBlock';
 import { Flex } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
@@ -32,9 +33,8 @@ const Index: React.FC<{}> = () => {
       {/* The world's top liquidity traders provide quotations */}
       <RedBlock />
 
-      <Flex width="100%" height="300px" justify="center" align="center">
-        9 pics
-      </Flex>
+      {/* Media Awards */}
+      <MediaAwards />
     </Wrapper>
   );
 };

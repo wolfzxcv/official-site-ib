@@ -50,14 +50,22 @@ export type Common = {
   ProvidesStateOfTheArt: string;
   /** We bring you the best */
   WeBringYouTheBest: string;
-  /** liquidity provider */
-  liquidityProvider: string;
-  /** Buying rate */
-  BuyingRate: string;
-  /** Selling rate */
-  SellingRate: string;
-  /** spread */
-  spread: string;
-  /** Client */
-  Client: string;
+  /** WCG Markets is strong */
+  //  WCGMarketsIsStrong: string;
+  /** As the only spot */
+  // AsTheOnlySpot: string;
+  /** WCG Markets is a leading */
+  // WCGMarketsIsALeading: string;
+  /** WCG's mission is to provide */
+  //  WCGsMissionIsToProvide: string;
+  /** WCG keeps making progress with */
+  //  WCGKeepsMakingProgressWith: string;
+  /** We use the latest bridging technology */
+  // WeUseTheLatestBridgingTechnology: string;
+  /** Adhering to our core principles */
+  // AdheringToOurCorePrinciples: string;
+  /** We value great importance */
+  // WeValueGreatImportance: string;
+  /** The strength was confirmed again */
+  // TheStrengthWasConfirmedAgain: string;
 };
