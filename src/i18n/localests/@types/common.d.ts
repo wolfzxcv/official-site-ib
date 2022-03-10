@@ -50,22 +50,22 @@ export type Common = {
   ProvidesStateOfTheArt: string;
   /** We bring you the best */
   WeBringYouTheBest: string;
-  /** WCG Markets is strong */
-  //  WCGMarketsIsStrong: string;
-  /** As the only spot */
-  // AsTheOnlySpot: string;
-  /** WCG Markets is a leading */
-  // WCGMarketsIsALeading: string;
-  /** WCG's mission is to provide */
-  //  WCGsMissionIsToProvide: string;
-  /** WCG keeps making progress with */
-  //  WCGKeepsMakingProgressWith: string;
-  /** We use the latest bridging technology */
-  // WeUseTheLatestBridgingTechnology: string;
-  /** Adhering to our core principles */
-  // AdheringToOurCorePrinciples: string;
-  /** We value great importance */
-  // WeValueGreatImportance: string;
-  /** The strength was confirmed again */
-  // TheStrengthWasConfirmedAgain: string;
+  /** media awards 1 */
+  mediaAwards1: string;
+  /** media awards 2 */
+  mediaAwards2: string;
+  /** media awards 3 */
+  mediaAwards3: string;
+  /** media awards 4 */
+  mediaAwards4: string;
+  /** media awards 5 */
+  mediaAwards5: string;
+  /** media awards 6 */
+  mediaAwards6: string;
+  /** media awards 7 */
+  mediaAwards7: string;
+  /** media awards 8 */
+  mediaAwards8: string;
+  /** media awards 9 */
+  mediaAwards9: string;
 };

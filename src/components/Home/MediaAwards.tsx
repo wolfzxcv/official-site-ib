@@ -19,47 +19,47 @@ const MediaAwards: React.FC<{}> = () => {
         <Flex flexDir={{ base: 'column', md: 'row' }} justify="center">
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_01.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards1')}
           />
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_02.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards2')}
           />
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_03.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards3')}
           />
         </Flex>
 
         <Flex flexDir={{ base: 'column', md: 'row' }} justify="center">
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_04.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards4')}
           />
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_05.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards5')}
           />
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_06.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards6')}
           />
         </Flex>
 
         <Flex flexDir={{ base: 'column', md: 'row' }} justify="center">
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_07.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards7')}
           />
 
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_08.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards8')}
           />
 
           <MediaAwardsEach
             imageSrc="../assets/images/home_media_awards_09.png"
-            text={t('WeBringYouTheBest')}
+            text={t('mediaAwards9')}
           />
         </Flex>
       </Box>
