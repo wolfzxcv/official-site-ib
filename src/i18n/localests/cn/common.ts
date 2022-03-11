@@ -42,5 +42,25 @@ export const common: Common = {
   mediaAwards7: '坚持我们公平公正的核心原则，我们确保全自动执行客户交易。',
   mediaAwards8:
     '非常重视客户的交易体验，WCG 的团队会为您随时提供一对一的客户服务，让您享有全球最好的交易环境。',
-  mediaAwards9: '实力再被确认获金银业贸易场 GTP Certified 征章。'
+  mediaAwards9: '实力再被确认获金银业贸易场 GTP Certified 征章。',
+  InstantRebatePayment: '即时返佣支付',
+  WCGMarketsFullyAutomated:
+    'WCG Markets 全自动化返佣系统保障 IB 代理的佣金将获得按时支付，不会有任何隐藏的费用或收费。',
+  DownloadApp: '下载应用程序',
+  OneToOneLiveCustomerService: '一对一真人客户服务',
+  ProvidePartnersWith:
+    '为合作伙伴提供每週五天，每天二十四小时的多语言即时支援。特别指派的客户经理将给予合作伙伴适当指导，帮助合作伙伴。',
+  OpenRealAccount: '开立真实帐户',
+  DecentDeposit: '完善的出入金渠道',
+  UnionPay: '银联',
+  OnlineBankTransfer: '网银转账',
+  WireTransfer: '电汇',
+  ComprehensiveSupport: '全方位支援',
+  YearEndBonus: ' 年终红利奖金',
+  CommonProsperity: '共同富裕，年终发放特别红利奖金与我们一起成长。',
+  VPNSupport: 'VPN 支援',
+  ProvideASafeNetwork: '提供安全网路营商环境，让代理专注发展事业再无担忧。',
+  RegisterNow: '立即註册',
+  ExtraMarketing: '额外市场营运贊助',
+  ToTheQualifiedPartners: '对符合资格的代理，公司会额外提供广告或营运贊助。'
 };

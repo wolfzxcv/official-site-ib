@@ -47,5 +47,28 @@ export const common: Common = {
   mediaAwards8:
     "We value great importance to the customer's trading experience, and the WCG team will provide you with one-to-one customer manager at any time, allowing you to enjoy the best trading environment in the world.",
   mediaAwards9:
-    'The strength was confirmed again and won the GTP Certified badge of the Chinese Gold and Silver Exchange Society.'
+    'The strength was confirmed again and won the GTP Certified badge of the Chinese Gold and Silver Exchange Society',
+  InstantRebatePayment: 'Instant Rebate Payment',
+  WCGMarketsFullyAutomated:
+    'WCG Markets’ fully automated commission rebate system ensures that the commission of IB agents will be paid on time without any hidden fees or further charges',
+  DownloadApp: 'Download App',
+  OneToOneLiveCustomerService: 'One-To-One Live Customer Service',
+  ProvidePartnersWith:
+    'Provide partners with real-time support in multiple languages 24 hours a day, five days a week. A dedicated assigned account manager will give the partner proper guidance and help the partner.',
+  OpenRealAccount: 'Open Real Account',
+  DecentDeposit: 'Decent Deposit And Withdrawal Service',
+  UnionPay: 'UnionPay',
+  OnlineBankTransfer: 'Online Bank Transfer',
+  WireTransfer: 'Wire Transfer',
+  ComprehensiveSupport: 'Comprehensive Support',
+  YearEndBonus: 'Year-End Bonus',
+  CommonProsperity:
+    'Common prosperity, special bonus will be issued at the end of the year to grow with us.',
+  VPNSupport: 'VPN Support',
+  ProvideASafeNetwork:
+    'Provide a safe network for business environment, so that partners can focus on developing their careers without worry.',
+  RegisterNow: 'Register Now',
+  ExtraMarketing: 'Extra Marketing Operation Sponsorship',
+  ToTheQualifiedPartners:
+    'To the qualified partners, company will provide extra advertising or operational sponsorship.'
 };

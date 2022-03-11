@@ -68,4 +68,42 @@ export type Common = {
   mediaAwards8: string;
   /** media awards 9 */
   mediaAwards9: string;
+  /** AD STARTS HERE */
+  /** Instant rebate payment */
+  InstantRebatePayment: string;
+  /** WCG Markets’ fully automated */
+  WCGMarketsFullyAutomated: string;
+  /** Download App */
+  DownloadApp: string;
+  /** One-To-One Live Customer Service */
+  OneToOneLiveCustomerService: string;
+  /** Provide partners with */
+  ProvidePartnersWith: string;
+  /** Open Real Account */
+  OpenRealAccount: string;
+  /** Decent Deposit And Withdrawal Service */
+  DecentDeposit: string;
+  /** UnionPay */
+  UnionPay: string;
+  /** Online Bank Transfer */
+  OnlineBankTransfer: string;
+  /** Wire Transfer */
+  WireTransfer: string;
+  /** Comprehensive Support */
+  ComprehensiveSupport: string;
+  /** Year-End Bonus */
+  YearEndBonus: string;
+  /** Common prosperity */
+  CommonProsperity: string;
+  /** VPN Support */
+  VPNSupport: string;
+  /** Provide a safe network */
+  ProvideASafeNetwork: string;
+  /** Register Now */
+  RegisterNow: string;
+  /** Extra Marketing */
+  ExtraMarketing: string;
+  /** To the qualified partners */
+  ToTheQualifiedPartners: string;
+  /** AD ENDS HERE */
 };
