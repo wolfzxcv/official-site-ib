@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 
 const arrowsPositionFromTheTop = '500px';
 
-const barPositionFromTheTop = '600px';
+const barPositionFromTheTop = '650px';
 
-const arrowColor = 'blue.700';
+const arrowColor = '#053d49';
 
-const unselectedItem = 'blue.700';
+const unselectedItem = '#053d49';
 
-const selectedItem = 'red.500';
+const selectedItem = '#e2e2e2';
 
 type CarouselProps = {
   defaultSlider: JSX.Element;
@@ -24,10 +24,10 @@ type CarouselProps = {
 const Carousel: React.FC<CarouselProps> = ({
   defaultSlider,
   sliders,
-  showArrow = true,
+  showArrow = false,
   duration = 0.5,
   transition = 10,
-  type = 'circle'
+  type = 'bar'
 }: CarouselProps) => {
   const [index, setIndex] = useState(0);
 
@@ -114,7 +114,6 @@ const Carousel: React.FC<CarouselProps> = ({
         onTouchStart={(e: React.TouchEvent) =>
           handleMove(e.changedTouches[0].clientX, 'start')
         }
-        onTouchMove={(e: React.TouchEvent) => e.preventDefault()}
         onTouchEnd={(e: React.TouchEvent) =>
           handleMove(e.changedTouches[0].clientX, 'end')
         }

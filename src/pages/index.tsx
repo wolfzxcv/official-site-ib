@@ -1,6 +1,9 @@
-import Banner from '@/components/Banner/Banner';
-import WCG15ZJ from '@/components/Banner/WCG15ZJ';
-import XNHZ from '@/components/Banner/XNHZ';
+import AD1 from '@/components/Banner/AD1';
+import AD2 from '@/components/Banner/AD2';
+import AD3 from '@/components/Banner/AD3';
+import AD4 from '@/components/Banner/AD4';
+import AD5 from '@/components/Banner/AD5';
+import AD6 from '@/components/Banner/AD6';
 import Wrapper from '@/components/Base/Wrapper';
 import Carousel from '@/components/Carousel/Carousel';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
@@ -16,25 +19,18 @@ const Products = dynamic(() => import('@/components/Home/Products'), {
 
 const Index: React.FC<{}> = () => {
   const sliders = [
-    <WCG15ZJ key="WCG15ZJ" />,
-    <Banner key="Banner" />,
-    <XNHZ key="XNHZ" />
+    <AD1 key="AD1" />,
+    <AD2 key="AD2" />,
+    <AD3 key="AD3" />,
+    <AD4 key="AD4" />,
+    <AD5 key="AD5" />,
+    <AD6 key="AD6" />
   ];
 
   return (
     <Wrapper>
       {/* Carousel */}
-      <Carousel defaultSlider={<Banner key="Banner" />} sliders={sliders} />
-      {/* <Flex
-        width="100%"
-        height="300px"
-        bg="#041c27"
-        justify="center"
-        align="center"
-        color="white"
-      >
-        banner
-      </Flex> */}
+      <Carousel defaultSlider={<AD1 key="AD1" />} sliders={sliders} />
 
       {/* $25up no limit */}
       <HorizontalStrip />
