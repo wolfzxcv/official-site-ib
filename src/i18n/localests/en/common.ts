@@ -31,7 +31,7 @@ export const common: Common = {
   WeBringYouTheBest:
     "We bring you the best market breadth and depth of liquidity. Our smart order routing leverages WCG Markets' state-of-the-art pricing engine to support multi-tier aggregation of best bids/asks to execute your orders at the best prices available in deep liquidity pools. This enables you to trade a wide range of markets at truly competitive prices.",
   mediaAwards1:
-    'WCG Markets is strong and has always been known for its honesty, reliability, and excellent quality service. Now the professional strength has been recognized again, and only about twenty of the hundreds of employees in the Chinese Gold and Silver Exchange Society can obtain the GTP Certified badge.',
+    'WCG Markets is strong and has always been known for its honesty, reliability, and excellent quality service. Now the professional strength has been recognized again, and only about twenty of the hundreds of employees in the professional exchange society can obtain the GTP Certified badge.',
   mediaAwards2:
     'Now excited to announce that WCG Markets is making a major update. The new customer center and agent back office are officially launched. The post-epidemic era has arrived, and WCG Markets is the first to provide revolutionary and optimal updates to help you win the market development career one step ahead in this environment. Let us make progress together. Since the development of WCG Markets, it has never forgotten its original intention, and has maintained a humble and pragmatic attitude to progress and innovate.',
   mediaAwards3:
@@ -47,7 +47,7 @@ export const common: Common = {
   mediaAwards8:
     "We value great importance to the customer's trading experience, and the WCG team will provide you with one-to-one customer manager at any time, allowing you to enjoy the best trading environment in the world.",
   mediaAwards9:
-    'The strength was confirmed again and won the GTP Certified badge of the Chinese Gold and Silver Exchange Society',
+    'The strength was confirmed again and won the GTP Certified badge of the professional exchange society',
   InstantRebatePayment: 'Instant Rebate Payment',
   WCGMarketsFullyAutomated:
     'WCG Markets’ fully automated commission rebate system ensures that the commission of IB agents will be paid on time without any hidden fees or further charges',

@@ -28,7 +28,7 @@ export const common: Common = {
   WeBringYouTheBest:
     '我們為您帶來最佳的市場廣度和深度的流動性。 我們的智能訂單路由利用 WCG MARKETS 的最先進的定價引擎來支持多層最佳買/賣的匯總，從而以深層流動性池中可用的最佳價格執行您的訂單。 這使您能夠以真正具有競爭力的價格交易廣泛的市場。',
   mediaAwards1:
-    'WCG Markets 實力雄厚，一直都以誠實可靠，卓越優質的服務而為熟悉。現專業實力更再獲認可，於金銀業貿易場中數百位行員當中只有約二十位行員能獲得 GTP Certified 徽章。',
+    'WCG Markets 實力雄厚，一直都以誠實可靠，卓越優質的服務而為熟悉。現專業實力更再獲認可，於專業認可的貿易場中數百位行員當中只有約二十位行員能獲得 GTP Certified 徽章。',
   mediaAwards2:
     '現在很興奮的公告天下，WCG Markets 正進行重大更新。全新的客戶中心和代理後台正式推出。後疫情時代已經來臨，WCG Markets 搶先一步提供革命性的最優更新，助您在這個環境下快人一步奪得市場發展事業。讓我們一起攜手進步。WCG Markets 發展致今一直未忘初心，保持著謙卑和務實的態度去進步與創新。',
   mediaAwards3:
@@ -42,7 +42,7 @@ export const common: Common = {
   mediaAwards7: '堅持我們公平公正的核心原則，我們確保全自動執行客戶交易。',
   mediaAwards8:
     '非常重視客戶的交易體驗，WCG 的團隊會為您隨時提供一對一的客戶服務，讓您享有全球最好的交易環境。',
-  mediaAwards9: '實力再被確認獲金銀業貿易場 GTP Certified 徽章。',
+  mediaAwards9: '實力再被確認獲專業認可的貿易場 GTP Certified 徽章。',
   InstantRebatePayment: '即時返傭支付',
   WCGMarketsFullyAutomated:
     'WCG Markets 全自動化返傭系統保障 IB 代理的傭金將獲得按時支付，不會有任何隱藏的費用或收費。',
