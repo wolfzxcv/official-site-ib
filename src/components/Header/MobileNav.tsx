@@ -27,7 +27,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
 }: MobileNavProps) => {
   const { t } = useTranslation('header');
 
-  const handleClose = () => {
+  const handleOpenChatWindow = () => {
     onClose();
     openChatWindow();
   };
@@ -43,7 +43,8 @@ const MobileNav: React.FC<MobileNavProps> = ({
       <DrawerContent>
         <DrawerHeader borderBottomWidth="1px" onClick={onClose}>
           <Flex align="center" fontWeight="700" fontSize="16px">
-            <AiOutlineMenu /> <Box ml="2">{t('menu')}</Box>
+            <AiOutlineMenu />
+            <Box ml="2">{t('menu').toUpperCase()}</Box>
           </Flex>
         </DrawerHeader>
         <DrawerBody>
@@ -55,11 +56,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
                 href={each.href}
               />
             ))}
-            <MobileNavItemBase
-              uppercase
-              i18n="liveChat"
-              onClick={handleClose}
-            />
+            <MobileNavItemBase i18n="liveChat" onClick={handleOpenChatWindow} />
           </Flex>
         </DrawerBody>
       </DrawerContent>
@@ -73,20 +70,23 @@ const MobileNavItem: React.FC<IMenuItem> = ({ i18n, href }: IMenuItem) => {
 
   return (
     <NextLink passHref={true} href={href} locale={currentLang}>
-      <MobileNavItemBase i18n={i18n} />
+      <MobileNavItemBase
+        i18n={i18n}
+        color={router.pathname === href ? '#B81C22' : undefined}
+      />
     </NextLink>
   );
 };
 
 type MobileNavItemBaseProps = {
-  uppercase?: boolean;
+  color?: string;
   i18n: IMenuItem['i18n'];
   onClick?: () => void;
 };
 
 const MobileNavItemBase = forwardRef<HTMLDivElement, MobileNavItemBaseProps>(
   (
-    { uppercase = false, i18n, onClick, ...rest }: MobileNavItemBaseProps,
+    { color = 'inherit', i18n, onClick, ...rest }: MobileNavItemBaseProps,
     ref
   ) => {
     const { t } = useTranslation('header');
@@ -94,18 +94,14 @@ const MobileNavItemBase = forwardRef<HTMLDivElement, MobileNavItemBaseProps>(
       <Box
         ref={ref}
         {...rest}
-        _hover={{
-          cursor: 'pointer',
-          bg: '#e2e2e2',
-          opacity: 0.7
-        }}
+        color={color}
         px="5"
         py="2"
         transition={'all .5s ease'}
         fontWeight="700"
         onClick={onClick}
       >
-        {uppercase ? t(i18n).toUpperCase() : t(i18n)}
+        {t(i18n).toUpperCase()}
       </Box>
     );
   }

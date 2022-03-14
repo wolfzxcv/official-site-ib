@@ -1,7 +1,20 @@
+import Wrapper from '@/components/Base/Wrapper';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
 
 const contact: React.FC<{}> = () => {
-  return <div>contact page!</div>;
+  return (
+    <Wrapper>
+      <div>contact page!</div>
+    </Wrapper>
+  );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale!, ['header', 'footer']))
+  }
+});
 
 export default contact;

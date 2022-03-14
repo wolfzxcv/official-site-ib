@@ -33,6 +33,7 @@ const DesktopNavItem: React.FC<IMenuItem> = ({ i18n, href }: IMenuItem) => {
         py="2"
         transition="all .5s ease"
         fontWeight="700"
+        color={router.pathname === href ? '#B81C22' : 'inherit'}
       >
         {t(i18n)}
       </Box>

@@ -12,22 +12,22 @@ export const menuList: IMenuItem[] = [
   },
   {
     i18n: 'feature',
-    href: '/'
+    href: '/feature'
   },
   {
     i18n: 'agent',
-    href: '/'
+    href: '/agent'
   },
   {
     i18n: 'promotion',
-    href: '/'
+    href: '/promotion'
   },
   {
     i18n: 'activity',
-    href: '/'
+    href: '/activity'
   },
   {
     i18n: 'contact',
-    href: '/'
+    href: '/contact'
   }
 ];

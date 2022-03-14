@@ -33,10 +33,11 @@ const MobileHeader: React.FC<{}> = () => {
         borderBottom="1px"
       >
         <Flex onClick={onOpenMobileNav} align="center">
-          <AiOutlineMenu /> <Box ml="2">{t('menu')}</Box>
+          <AiOutlineMenu />
+          <Box ml="2">{t('menu').toUpperCase()}</Box>
         </Flex>
         <Flex onClick={onOpenMobileLangSelector} align="center">
-          <Box mr="2">{t('language')}</Box>
+          <Box mr="2">{t('language').toUpperCase()}</Box>
           <ImEarth />
         </Flex>
       </Flex>

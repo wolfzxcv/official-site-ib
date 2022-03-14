@@ -15,11 +15,13 @@ import React, { useEffect } from 'react';
 import { ImEarth } from 'react-icons/im';
 
 type MobileLangSelectorProps = {
+  uppercase?: boolean;
   isOpen: boolean;
   onClose: () => void;
 };
 
 const MobileLangSelector: React.FC<MobileLangSelectorProps> = ({
+  uppercase,
   isOpen,
   onClose
 }: MobileLangSelectorProps) => {
@@ -86,7 +88,9 @@ const MobileLangSelector: React.FC<MobileLangSelectorProps> = ({
       <DrawerContent>
         <DrawerHeader borderBottomWidth="1px" onClick={onClose}>
           <Flex align="center" fontWeight="700" fontSize="16px">
-            <Box mr="2">{t('language')}</Box>
+            <Box mr="2">
+              {uppercase ? t('language').toUpperCase() : t('language')}{' '}
+            </Box>
             <ImEarth />
           </Flex>
         </DrawerHeader>
