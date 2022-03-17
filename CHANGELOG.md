@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/wolfzxcv/official-site-ib/compare/v1.1.0...v1.2.0) (2022-03-17)
+
+
+### Features
+
+* **banner:** banner and other app styling ([219daba](https://github.com/wolfzxcv/official-site-ib/commit/219daba1be758d9f083361fc53e6f818531dbac5))
+* **carousel:** add swipe ([57887fb](https://github.com/wolfzxcv/official-site-ib/commit/57887fb83ce5081455bf4e8326bee013eef56b94))
+
+
+### Bug Fixes
+
+* **carousel:** carousel progress bar in mobile and add swipe tolerance to prevent up down swipe ([c6052ce](https://github.com/wolfzxcv/official-site-ib/commit/c6052ce9fbfd0b0e9e34d646d3d047734e11a23e))
+* **mobile nav:** fix header layout, add mobile live chat, fix forwardRef ([3a5ae11](https://github.com/wolfzxcv/official-site-ib/commit/3a5ae11d6cf1e72beb77bffbfd9b3842b087d35d))
+
 ## 1.1.0 (2022-03-02)
 
 
