@@ -1,6 +1,7 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
+import { Box, Flex, Image, SlideFade } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 
 const Products: React.FC<{}> = () => {
   const { t } = useTranslation('common');
@@ -72,19 +73,33 @@ const ProductsEach: React.FC<ProductsEachProps> = ({
       pb={{ base: '50px', md: 0 }}
       align={{ base: 'start', md: 'center' }}
     >
-      <Box width="30px" height="30px">
-        <Image src={imageSrc} alt={text} />
-      </Box>
-      <Box
-        fontSize={{ base: '24px', md: '36px' }}
-        fontWeight="700"
-        width="100%"
-        my={2}
-        textAlign={{ base: 'left', md: 'center' }}
-      >
-        {title}
-      </Box>
-      <Box>{text}</Box>
+      <InView>
+        {/* eslint-disable-next-line no-unused-vars */}
+        {({ inView, ref, entry }) => (
+          <SlideFade
+            ref={ref}
+            in={inView}
+            transition={{ enter: { duration: 1 } }}
+            offsetY="50px"
+          >
+            <Flex justify="center">
+              <Box width="30px" height="30px">
+                <Image src={imageSrc} alt={text} />
+              </Box>
+            </Flex>
+            <Box
+              fontSize={{ base: '24px', md: '36px' }}
+              fontWeight="700"
+              width="100%"
+              my={2}
+              textAlign={{ base: 'left', md: 'center' }}
+            >
+              {title}
+            </Box>
+            <Box>{text}</Box>
+          </SlideFade>
+        )}
+      </InView>
     </Flex>
   );
 };

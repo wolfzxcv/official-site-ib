@@ -22,13 +22,13 @@ const DesktopHeader: React.FC<{}> = () => {
         <Flex borderLeft="1px" borderRight="1px" borderColor="#a9a9a9" px="5">
           <DownloadLink
             href={links.mt4Android}
-            imageSrc="../assets/images/google_play.png"
+            imageSrc="../assets/images/header_google_play.png"
             text="Google Play"
           />
 
           <DownloadLink
             href={links.mt4IOS}
-            imageSrc="../assets/images/apple_store.png"
+            imageSrc="../assets/images/header_apple_store.png"
             text="Apple Store"
           />
 
@@ -101,7 +101,7 @@ const DownloadLink: React.FC<DownloadLinkProps> = ({
   return (
     <Link
       _hover={{
-        color: 'white',
+        opacity: 0.5,
         transition: '1s',
         borderRadius: '10px'
       }}
@@ -185,9 +185,8 @@ export const ClickLinkBase: React.FC<ClickLinkBaseProps> = ({
   return (
     <Flex
       _hover={{
-        color: 'gray.300',
         transition: '1s',
-        opacity: 0.8
+        opacity: 0.5
       }}
       onClick={onClick}
       bg={bg}

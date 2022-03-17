@@ -1,6 +1,7 @@
-import { Box, Flex, Image } from '@chakra-ui/react';
+import { Box, Flex, Image, SlideFade } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 
 const MediaAwards: React.FC<{}> = () => {
   const { t } = useTranslation('common');
@@ -80,23 +81,35 @@ const MediaAwardsEach: React.FC<MediaAwardsEachProps> = ({
 }: MediaAwardsEachProps) => {
   return (
     <Flex flexDir={'column'} width={{ base: '100%', md: '35%' }} my={5}>
-      <Flex justify="center" align="center" height="150px">
-        <Box>
-          <Image src={imageSrc} alt={text} />
-        </Box>
-      </Flex>
-      <Flex justify="center" mb={5}>
-        <Box>
-          <Image
-            src="../assets/images/home_media_awards_divider.png"
-            alt="divider"
-          />
-        </Box>
-      </Flex>
+      <InView>
+        {/* eslint-disable-next-line no-unused-vars */}
+        {({ inView, ref, entry }) => (
+          <SlideFade
+            ref={ref}
+            in={inView}
+            transition={{ enter: { duration: 1 } }}
+            offsetY="-50px"
+          >
+            <Flex justify="center" align="center" height="150px">
+              <Box>
+                <Image src={imageSrc} alt={text} />
+              </Box>
+            </Flex>
+            <Flex justify="center" mb={5}>
+              <Box>
+                <Image
+                  src="../assets/images/home_media_awards_divider.png"
+                  alt="divider"
+                />
+              </Box>
+            </Flex>
 
-      <Flex justify={'center'}>
-        <Box width={'80%'}>{text}</Box>
-      </Flex>
+            <Flex justify={'center'}>
+              <Box width={'80%'}>{text}</Box>
+            </Flex>
+          </SlideFade>
+        )}
+      </InView>
     </Flex>
   );
 };

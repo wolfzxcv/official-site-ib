@@ -2,6 +2,7 @@ import { openChatWindow } from '@/utils';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
+import IBButtonBase from '../Common/IBButtonBase';
 
 const HorizontalStrip: React.FC<{}> = () => {
   const { t } = useTranslation('common');
@@ -44,21 +45,11 @@ const HorizontalStrip: React.FC<{}> = () => {
             text={t('withdrawal')}
           />
         </Flex>
-        <Flex
-          bg="#0e7283"
-          borderRadius="20px"
-          width={{ base: '60vw', md: '150px' }}
-          py="3"
-          mt={{ base: 5, md: 0 }}
-          justify="space-around"
+        <IBButtonBase
           onClick={openChatWindow}
-          _hover={{
-            cursor: 'pointer'
-          }}
-        >
-          <Box>{t('startNow')}</Box>
-          <Box display={{ base: 'none', md: 'block' }}>{'>'}</Box>
-        </Flex>
+          text={t('startNow')}
+          width={{ base: '60vw', md: '150px' }}
+        />
       </Flex>
     </Flex>
   );

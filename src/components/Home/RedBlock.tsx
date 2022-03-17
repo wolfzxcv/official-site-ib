@@ -4,9 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-type RedBlockProps = {};
-
-const RedBlock: React.FC<RedBlockProps> = () => {
+const RedBlock: React.FC<{}> = () => {
   const { t } = useTranslation('common');
 
   const router = useRouter();
@@ -39,6 +37,7 @@ const RedBlock: React.FC<RedBlockProps> = () => {
           >
             {t('TheWorldsTop')}
           </Box>
+
           <Box pb={5}>{t('YouWilHave')}</Box>
 
           <Stack spacing={1} pb={{ base: 5, md: 10 }}>
@@ -46,15 +45,18 @@ const RedBlock: React.FC<RedBlockProps> = () => {
               <Tick />
               <Box>{t('PartnerWithTop')}</Box>
             </Flex>
+
             <Flex align="center">
               <Tick />
               <Box>{t('PoweredByWCGMarkets')}</Box>
             </Flex>
+
             <Flex align="center">
               <Tick />
               <Box>{t('ProvidesStateOfTheArt')}</Box>
             </Flex>
           </Stack>
+
           <Box>{t('WeBringYouTheBest')}</Box>
         </Flex>
         <Flex width={{ base: '100%', md: '50%' }} my={{ base: 10, md: 0 }}>

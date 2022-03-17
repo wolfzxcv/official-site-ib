@@ -1,5 +1,5 @@
 import { Locales, locales, localesOptions } from '@/i18n/config';
-import { getCookie, isUsingMobile, setCookie } from '@/utils';
+import { getCookie, setCookie } from '@/utils';
 import {
   Box,
   Flex,
@@ -21,19 +21,15 @@ const DesktopLangSelector: React.FC<{}> = () => {
   const [language, setLanguage] = useState(i18n?.languages[0]);
 
   const router = useRouter();
-  const currentLang = router.locale as Locales;
 
   const getCurrentLanguage = () => {
     const langInCookie = getCookie('wcg-ib-lang') as Locales;
 
-    if (
-      langInCookie &&
-      locales.includes(langInCookie) &&
-      langInCookie !== currentLang
-    ) {
+    if (langInCookie && locales.includes(langInCookie)) {
       handleSetLanguage(langInCookie);
     } else {
       let lang = i18n?.languages[0] as Locales;
+
       // Check browser language manually
       const isCN =
         (window as any)?.navigator.languages.includes('zh-CN') ||
@@ -42,14 +38,6 @@ const DesktopLangSelector: React.FC<{}> = () => {
 
       if (isCN) {
         lang = 'cn';
-      } else if (isUsingMobile()) {
-        // If it's a mobile, use substr(0, 2) to get lang ISO code, if it matches any of our app locales, set it as language
-        const matchLang = navigator.languages
-          .find((x) => x.substr(0, 2) === navigator.language.substr(0, 2))
-          .substr(0, 2) as Locales;
-        if (i18n?.languages.includes(matchLang)) {
-          lang = matchLang;
-        }
       }
 
       // to save locale in cookie

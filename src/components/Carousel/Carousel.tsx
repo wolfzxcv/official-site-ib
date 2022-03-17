@@ -26,7 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({
   sliders,
   showArrow = false,
   duration = 0.5,
-  transition = 5,
+  transition = 6,
   type = 'bar'
 }: CarouselProps) => {
   const [index, setIndex] = useState(0);

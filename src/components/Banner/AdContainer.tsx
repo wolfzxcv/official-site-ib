@@ -20,8 +20,6 @@ const AdContainer: React.FC<AdContainerProps> = ({
       }}
       bgPosition="top center"
       bgSize="cover"
-      justify="center"
-      align="center"
       color="white"
     >
       {children}

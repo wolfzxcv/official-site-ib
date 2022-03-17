@@ -37,23 +37,11 @@ const MobileLangSelector: React.FC<MobileLangSelectorProps> = ({
   const getCurrentLanguage = () => {
     const langInCookie = getCookie('wcg-ib-lang') as Locales;
 
-    if (
-      langInCookie &&
-      locales.includes(langInCookie) &&
-      langInCookie !== currentLang
-    ) {
+    if (langInCookie && locales.includes(langInCookie)) {
       handleSetLanguage(langInCookie);
     } else {
       let lang = i18n?.languages[0] as Locales;
-      // Check browser language manually
-      const isCN =
-        (window as any)?.navigator.languages.includes('zh-CN') ||
-        (window as any)?.navigator.languages.includes('zh-cn') ||
-        null;
-
-      if (isCN) {
-        lang = 'cn';
-      } else if (isUsingMobile()) {
+      if (isUsingMobile()) {
         // If it's a mobile, use substr(0, 2) to get lang ISO code, if it matches any of our app locales, set it as language
         const matchLang = navigator.languages
           .find((x) => x.substr(0, 2) === navigator.language.substr(0, 2))
