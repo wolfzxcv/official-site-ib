@@ -24,7 +24,7 @@ const AD1: React.FC<{}> = () => {
             mb={10}
             fontWeight={700}
             width="100%"
-            textAlign="center"
+            textAlign={{ base: 'center', md: 'left' }}
           >
             {title}
           </Box>
