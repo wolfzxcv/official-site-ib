@@ -13,7 +13,7 @@ const Footer: React.FC<{}> = () => {
       bg={footerBg}
       color={footerFont}
       pt={{ base: 0, md: '100px' }}
-      fontSize="12px"
+      fontSize={{ base: '10px', md: '12px' }}
     >
       <FooterTop borderColor={footerFont} />
 
