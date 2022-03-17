@@ -20,9 +20,11 @@ const AD4: React.FC<{}> = () => {
           mt={{ base: 0, md: 10 }}
         >
           <Box
-            fontSize={{ base: title.length > 15 ? '16px' : '24px', md: '36px' }}
+            fontSize={{ base: title.length > 25 ? '16px' : '24px', md: '36px' }}
             mb={10}
             fontWeight={700}
+            width="100%"
+            textAlign="center"
           >
             {title}
           </Box>

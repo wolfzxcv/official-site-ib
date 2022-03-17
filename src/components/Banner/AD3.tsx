@@ -14,9 +14,11 @@ const AD3: React.FC<{}> = () => {
     <AdContainer imageSrc="../assets/images/home_ad_03.jpg">
       <Flex flexDir="column" width="100%" align="center" justify="center">
         <Box
-          fontSize={{ base: title.length > 15 ? '16px' : '24px', md: '36px' }}
+          fontSize={{ base: title.length > 25 ? '16px' : '24px', md: '36px' }}
           mb={{ base: 5, md: 10 }}
           fontWeight={700}
+          width="100%"
+          textAlign="center"
         >
           {title}
         </Box>
