@@ -11,5 +11,5 @@ export const header: Header = {
   agent: '代理类型',
   promotion: '推广工具',
   activity: '促销活动',
-  contact: '联繫方式'
+  contact: '联系方式'
 };
