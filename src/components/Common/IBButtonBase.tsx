@@ -23,6 +23,7 @@ const IBButtonBase = forwardRef<HTMLDivElement, IBButtonBaseProps>(
         width={width}
         py="3"
         mt={{ base: 5, md: 0 }}
+        fontWeight={700}
         justify="space-around"
         _hover={{
           cursor: 'pointer',

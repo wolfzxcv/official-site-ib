@@ -16,7 +16,7 @@ const AD6: React.FC<{}> = () => {
         <Flex
           flexDir="column"
           align={{ base: 'center', md: 'start' }}
-          mr={{ base: 0, md: '100px', xl: '700px' }}
+          mr={{ base: 0, md: '100px', xl: '400px' }}
           mt={{ base: 0, md: 10 }}
         >
           <Box

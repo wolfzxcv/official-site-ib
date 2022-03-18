@@ -44,7 +44,7 @@ export type Common = {
   YouWilHave: string;
   /** Partner with top */
   PartnerWithTop: string;
-  /** Powered by WCG Markets */
+  /** Powered by WCG MARKETS */
   PoweredByWCGMarkets: string;
   /** Provides state-of-the-art */
   ProvidesStateOfTheArt: string;
@@ -71,7 +71,7 @@ export type Common = {
   /** AD STARTS HERE */
   /** Instant rebate payment */
   InstantRebatePayment: string;
-  /** WCG Markets’ fully automated */
+  /** WCG MARKETS' fully automated */
   WCGMarketsFullyAutomated: string;
   /** Download App */
   DownloadApp: string;

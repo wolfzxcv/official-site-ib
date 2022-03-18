@@ -81,6 +81,7 @@ const ProductsEach: React.FC<ProductsEachProps> = ({
             in={inView}
             transition={{ enter: { duration: 1 } }}
             offsetY="50px"
+            style={{ width: '100%' }}
           >
             <Flex justify="center">
               <Box width="30px" height="30px">
