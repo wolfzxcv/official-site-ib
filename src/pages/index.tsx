@@ -5,20 +5,13 @@ import AD4 from '@/components/Banner/AD4';
 import AD5 from '@/components/Banner/AD5';
 import AD6 from '@/components/Banner/AD6';
 import Wrapper from '@/components/Base/Wrapper';
+import Carousel from '@/components/Carousel/Carousel';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
 import MediaAwards from '@/components/Home/MediaAwards';
+import Products from '@/components/Home/Products';
 import RedBlock from '@/components/Home/RedBlock';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import dynamic from 'next/dynamic';
-
-const Products = dynamic(() => import('@/components/Home/Products'), {
-  ssr: false
-});
-
-const Carousel = dynamic(() => import('@/components/Carousel/Carousel'), {
-  ssr: false
-});
 
 const Index: React.FC<{}> = () => {
   const sliders = [
