@@ -14,7 +14,7 @@ const contact: React.FC<{}> = () => {
     <Wrapper>
       <Flex
         height="395px"
-        bgImage="../assets/images/contact_banner.png"
+        bgImage="../assets/images/contact_banner.jpg"
         bgPosition="center"
         justify="center"
         align="end"
@@ -93,7 +93,7 @@ const ContactIcon: React.FC<ContactIconProps> = ({
   return (
     <Link
       _hover={{
-        opacity: 0.8,
+        opacity: 0.7,
         transition: '1s'
       }}
       mx={1}
