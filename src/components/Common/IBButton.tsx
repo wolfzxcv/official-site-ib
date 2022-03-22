@@ -7,7 +7,7 @@ export type IWidth = {
   md: string | number;
 };
 
-type IBButtonProps = {
+export type IBButtonProps = {
   href: string;
   text: string;
   width: IWidth;
