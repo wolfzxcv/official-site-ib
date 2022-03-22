@@ -3,6 +3,7 @@ import { Box, Flex, Image, Stack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
+import InViewSlideFade from '../Common/InViewSlideFade';
 
 const RedBlock: React.FC<{}> = () => {
   const { t } = useTranslation('common');
@@ -29,41 +30,55 @@ const RedBlock: React.FC<{}> = () => {
           justify={{ base: 'auto', md: 'center' }}
           my={{ base: 10, md: 0 }}
         >
-          <Box
-            fontSize={{ base: '24px', md: '36px' }}
-            fontWeight="700"
-            pb={{ base: 5, md: 10 }}
-            textAlign={'left'}
-          >
-            {t('TheWorldsTop')}
-          </Box>
+          <InViewSlideFade>
+            <Box
+              fontSize={{ base: '24px', md: '36px' }}
+              fontWeight="700"
+              pb={{ base: 5, md: 10 }}
+              textAlign={'left'}
+            >
+              {t('TheWorldsTop')}
+            </Box>
+          </InViewSlideFade>
 
-          <Box pb={5}>{t('YouWilHave')}</Box>
+          <InViewSlideFade>
+            <Box pb={5}>{t('YouWilHave')}</Box>
+          </InViewSlideFade>
 
           <Stack spacing={1} pb={{ base: 5, md: 10 }}>
-            <Flex align="center">
-              <Tick />
-              <Box>{t('PartnerWithTop')}</Box>
-            </Flex>
+            <InViewSlideFade>
+              <Flex align="center">
+                <Tick />
+                <Box>{t('PartnerWithTop')}</Box>
+              </Flex>
+            </InViewSlideFade>
 
-            <Flex align="center">
-              <Tick />
-              <Box>{t('PoweredByWCGMarkets')}</Box>
-            </Flex>
+            <InViewSlideFade>
+              <Flex align="center">
+                <Tick />
+                <Box>{t('PoweredByWCGMarkets')}</Box>
+              </Flex>
+            </InViewSlideFade>
 
-            <Flex align="center">
-              <Tick />
-              <Box>{t('ProvidesStateOfTheArt')}</Box>
-            </Flex>
+            <InViewSlideFade>
+              <Flex align="center">
+                <Tick />
+                <Box>{t('ProvidesStateOfTheArt')}</Box>
+              </Flex>
+            </InViewSlideFade>
           </Stack>
 
-          <Box>{t('WeBringYouTheBest')}</Box>
+          <InViewSlideFade>
+            <Box>{t('WeBringYouTheBest')}</Box>
+          </InViewSlideFade>
         </Flex>
         <Flex width={{ base: '100%', md: '50%' }} my={{ base: 10, md: 0 }}>
-          <Image
-            src={`../assets/images/home_red_block_${currentLang}.png`}
-            alt="home_red_block_pic"
-          />
+          <InViewSlideFade>
+            <Image
+              src={`../assets/images/home_red_block_${currentLang}.png`}
+              alt="home_red_block_pic"
+            />
+          </InViewSlideFade>
         </Flex>
       </Flex>
     </Flex>

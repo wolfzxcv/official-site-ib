@@ -1,7 +1,7 @@
-import { Box, Flex, Image, SlideFade } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { InView } from 'react-intersection-observer';
+import InViewSlideFade from '../Common/InViewSlideFade';
 
 const Products: React.FC<{}> = () => {
   const { t } = useTranslation('common');
@@ -16,14 +16,16 @@ const Products: React.FC<{}> = () => {
       pb={{ base: 10, md: '150px' }}
     >
       <Flex width="90vw" maxW="1100px" flexDir="column">
-        <Flex
-          fontSize={{ base: '24px', md: '36px' }}
-          fontWeight="700"
-          pb={{ base: 5, md: '80px' }}
-          justify={{ base: 'center', md: 'start' }}
-        >
-          {t('products')}
-        </Flex>
+        <InViewSlideFade>
+          <Flex
+            fontSize={{ base: '24px', md: '36px' }}
+            fontWeight="700"
+            pb={{ base: 5, md: '80px' }}
+            justify={{ base: 'center', md: 'start' }}
+          >
+            {t('products')}
+          </Flex>
+        </InViewSlideFade>
         <Flex wrap="wrap">
           <ProductsEach
             imageSrc="../assets/images/home_forex.png"
@@ -73,34 +75,23 @@ const ProductsEach: React.FC<ProductsEachProps> = ({
       pb={{ base: '50px', md: 0 }}
       align={{ base: 'start', md: 'center' }}
     >
-      <InView>
-        {/* eslint-disable-next-line no-unused-vars */}
-        {({ inView, ref, entry }) => (
-          <SlideFade
-            ref={ref}
-            in={inView}
-            transition={{ enter: { duration: 1 } }}
-            offsetY="50px"
-            style={{ width: '100%' }}
-          >
-            <Flex justify="center">
-              <Box width="30px" height="30px">
-                <Image src={imageSrc} alt={text} />
-              </Box>
-            </Flex>
-            <Box
-              fontSize={{ base: '24px', md: '36px' }}
-              fontWeight="700"
-              width="100%"
-              my={2}
-              textAlign={{ base: 'left', md: 'center' }}
-            >
-              {title}
-            </Box>
-            <Box>{text}</Box>
-          </SlideFade>
-        )}
-      </InView>
+      <InViewSlideFade style={{ width: '100%' }}>
+        <Flex justify="center">
+          <Box width="30px" height="30px">
+            <Image src={imageSrc} alt={text} />
+          </Box>
+        </Flex>
+        <Box
+          fontSize={{ base: '24px', md: '36px' }}
+          fontWeight="700"
+          width="100%"
+          my={2}
+          textAlign={{ base: 'left', md: 'center' }}
+        >
+          {title}
+        </Box>
+        <Box>{text}</Box>
+      </InViewSlideFade>
     </Flex>
   );
 };

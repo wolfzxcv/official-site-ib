@@ -1,5 +1,6 @@
 import Wrapper from '@/components/Base/Wrapper';
 import IBButton, { IBButtonProps } from '@/components/Common/IBButton';
+import InViewSlideFade from '@/components/Common/InViewSlideFade';
 import { Box, Flex, Image, Link } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
@@ -16,7 +17,7 @@ const activity: React.FC<{}> = () => {
         minH={{ base: '700px', md: '1051px' }}
         bgImage="../assets/images/activity_banner.jpg"
         bgRepeat="no-repeat"
-        bgPosition="start"
+        bgPosition="center top"
         justify="start"
         align="center"
         flexDir="column"
@@ -82,29 +83,31 @@ const ActivityEach: React.FC<ActivityEachProps> = ({
 
   return (
     <Flex flexDir="column" m="50px">
-      <Link
-        _hover={{
-          opacity: 0.8,
-          transition: '1s'
-        }}
-        href={href}
-        isExternal
-      >
-        <Box>
-          <Image src={imageSrc} alt={summary} />
-        </Box>
-      </Link>
-      <Box width="100%" textAlign="center" my={5}>
-        {summary}
-      </Box>
-      <Box width={{ base: '80%', md: '60%' }} mx="auto">
-        <IBButton
+      <InViewSlideFade>
+        <Link
+          _hover={{
+            opacity: 0.8,
+            transition: '1s'
+          }}
           href={href}
-          width={{ base: '100%', md: '100%' }}
-          text={text}
-          bg={bg}
-        />
-      </Box>
+          isExternal
+        >
+          <Box>
+            <Image src={imageSrc} alt={summary} />
+          </Box>
+        </Link>
+        <Box width="100%" textAlign="center" my={5}>
+          {summary}
+        </Box>
+        <Box width={{ base: '80%', md: '60%' }} mx="auto">
+          <IBButton
+            href={href}
+            width={{ base: '100%', md: '100%' }}
+            text={text}
+            bg={bg}
+          />
+        </Box>
+      </InViewSlideFade>
     </Flex>
   );
 };

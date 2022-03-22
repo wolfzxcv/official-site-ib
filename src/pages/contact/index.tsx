@@ -1,5 +1,6 @@
 import { links } from '@/assets/links';
 import Wrapper from '@/components/Base/Wrapper';
+import InViewSlideFade from '@/components/Common/InViewSlideFade';
 import { openChatWindow } from '@/utils';
 import { Box, Flex, Image, Link } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
@@ -91,23 +92,24 @@ const ContactIcon: React.FC<ContactIconProps> = ({
   onClick
 }: ContactIconProps) => {
   return (
-    <Link
-      _hover={{
-        opacity: 0.7,
-        transition: '1s'
-      }}
-      mx={1}
-      href={href}
-      isExternal
-    >
-      <Image
-        mx={{ base: 0, md: 5 }}
-        my={10}
-        onClick={onClick}
-        src={imageSrc}
-        alt="icon"
-      />
-    </Link>
+    <InViewSlideFade>
+      <Link
+        _hover={{
+          opacity: 0.7,
+          transition: '1s'
+        }}
+        mx={1}
+        href={href}
+        isExternal
+      >
+        <Image
+          m={{ base: 0, md: 5 }}
+          onClick={onClick}
+          src={imageSrc}
+          alt="icon"
+        />
+      </Link>
+    </InViewSlideFade>
   );
 };
 
