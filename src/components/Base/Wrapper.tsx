@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import React from 'react';
 import Footer from '../Footer/Footer';
+import BackToTop from './BackToTop';
 import HTMLHead from './HTMLHead';
 
 const LiveChat = dynamic(() => import('./LiveChat'), { ssr: false });
@@ -28,7 +29,7 @@ const Wrapper: React.FC<WrapperProps> = ({
       <Box minH="70vh" maxW={maxW} w="100%">
         {children}
       </Box>
-
+      <BackToTop />
       <Footer />
     </>
   );
