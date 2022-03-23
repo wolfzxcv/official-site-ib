@@ -10,12 +10,22 @@ import React from 'react';
 
 const agent: React.FC<{}> = () => {
   const { t } = useTranslation('agent');
+  const router = useRouter();
+  const currentLang = router.locale as Locales;
+
+  const isChinese = currentLang === 'cn' || currentLang === 'zh';
 
   return (
     <Wrapper>
       <Flex flexDir="column" color="white">
-        <Box bg="#0D242E" height="80px"></Box>
-        <Flex bg="#04293A" minH="600px" flexDir="column" align="center">
+        <PageBlock />
+        <Flex
+          bg="#04293A"
+          minH="600px"
+          height={{ base: 'auto', xxl: '600px' }}
+          flexDir="column"
+          align="center"
+        >
           <Box
             fontSize={{ base: '24px', md: '36px' }}
             textAlign="center"
@@ -38,8 +48,14 @@ const agent: React.FC<{}> = () => {
             />
           </Flex>
         </Flex>
-        <Box bg="#0D242E" height="100px" zIndex={-1}></Box>
-        <Flex bg="#ee8a08" minH="600px" flexDir="column" align="center">
+        <PageBlock />
+        <Flex
+          bg="#ee8a08"
+          minH="600px"
+          height={{ base: 'auto', xxl: '600px' }}
+          flexDir="column"
+          align="center"
+        >
           <Box
             fontSize={{ base: '24px', md: '36px' }}
             textAlign="center"
@@ -62,6 +78,60 @@ const agent: React.FC<{}> = () => {
             />
           </Flex>
         </Flex>
+
+        <Box
+          height="459px"
+          bgImage="../assets/images/agent_banner.jpg"
+          bgRepeat="no-repeat"
+          bgPosition="center top"
+          zIndex={-1}
+        ></Box>
+
+        <Flex
+          justify="center"
+          my={{ base: '50px', md: '150px' }}
+          fontSize={{
+            base: isChinese ? '18px' : 'auto',
+            md: isChinese ? '22px' : 'auto'
+          }}
+        >
+          <Flex
+            color="black"
+            justify="space-between"
+            width={{ base: '80vw', lg: '80vw' }}
+            maxW="1100px"
+            flexDir={{ base: 'column', lg: 'row' }}
+          >
+            <Flex
+              width={{ base: '100%', lg: '400px' }}
+              mb={{ base: 10, lg: 0 }}
+              flexDir="column"
+              align="center"
+            >
+              <InViewSlideFade>
+                <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
+                  {t('WhiteLabelPartnershipProgram')}
+                </Box>
+                <Box>{t('AddressingHighEndCustomizationNeeds')}</Box>
+              </InViewSlideFade>
+            </Flex>
+
+            <Flex
+              width={{ base: '100%', lg: '400px' }}
+              flexDir="column"
+              align="center"
+            >
+              <InViewSlideFade>
+                <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
+                  {t('RegionalRepresentative')}
+                </Box>
+                <Box>{t('ThisIsAUniqueOpportunity')}</Box>
+              </InViewSlideFade>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        <PageBlock />
       </Flex>
     </Wrapper>
   );
@@ -85,7 +155,7 @@ const AgentEach: React.FC<AgentEachProps> = ({
         bgSize="cover"
         width={{ base: '350px', md: '430px' }}
         height={{ base: '430px', md: '530px' }}
-        m={{ base: 5, md: 5 }}
+        m={5}
         justify="center"
         align="flex-end"
       >
@@ -106,6 +176,15 @@ const AgentEach: React.FC<AgentEachProps> = ({
     </InViewSlideFade>
   );
 };
+
+const PageBlock: React.FC<{}> = () => (
+  <Box
+    display={{ base: 'none', md: 'block' }}
+    bg="#041C27"
+    height="100px"
+    zIndex={-1}
+  ></Box>
+);
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {

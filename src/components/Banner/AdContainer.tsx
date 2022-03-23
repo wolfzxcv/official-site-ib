@@ -14,7 +14,7 @@ const AdContainer: React.FC<AdContainerProps> = ({
     <Flex
       minH={{ base: '630px', md: '555px' }}
       bg="#041C27"
-      backgroundImage={{
+      bgImage={{
         base: 'none',
         md: `url(${imageSrc})`
       }}
