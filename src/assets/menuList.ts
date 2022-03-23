@@ -10,10 +10,10 @@ export const menuList: IMenuItem[] = [
     i18n: 'home',
     href: '/'
   },
-  // {
-  //   i18n: 'feature',
-  //   href: '/feature'
-  // },
+  {
+    i18n: 'feature',
+    href: '/feature'
+  },
   {
     i18n: 'agent',
     href: '/agent'

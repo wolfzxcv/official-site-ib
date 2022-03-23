@@ -102,32 +102,31 @@ const agent: React.FC<{}> = () => {
             maxW="1100px"
             flexDir={{ base: 'column', lg: 'row' }}
           >
-            <Flex
-              width={{ base: '100%', lg: '400px' }}
-              mb={{ base: 10, lg: 0 }}
-              flexDir="column"
-              align="center"
-            >
-              <InViewSlideFade>
+            <InViewSlideFade>
+              <Flex
+                width={{ base: '100%', lg: '400px' }}
+                mb={{ base: 10, lg: 0 }}
+                flexDir="column"
+                align="center"
+              >
                 <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
                   {t('WhiteLabelPartnershipProgram')}
                 </Box>
                 <Box>{t('AddressingHighEndCustomizationNeeds')}</Box>
-              </InViewSlideFade>
-            </Flex>
-
-            <Flex
-              width={{ base: '100%', lg: '400px' }}
-              flexDir="column"
-              align="center"
-            >
-              <InViewSlideFade>
+              </Flex>
+            </InViewSlideFade>
+            <InViewSlideFade>
+              <Flex
+                width={{ base: '100%', lg: '400px' }}
+                flexDir="column"
+                align="center"
+              >
                 <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
                   {t('RegionalRepresentative')}
                 </Box>
                 <Box>{t('ThisIsAUniqueOpportunity')}</Box>
-              </InViewSlideFade>
-            </Flex>
+              </Flex>
+            </InViewSlideFade>
           </Flex>
         </Flex>
 
