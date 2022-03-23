@@ -1,4 +1,5 @@
 import Wrapper from '@/components/Base/Wrapper';
+import InViewSlideFade from '@/components/Common/InViewSlideFade';
 import { Box, Flex } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
@@ -24,9 +25,14 @@ const promotion: React.FC<{}> = () => {
           py={{ base: '50px', md: '150px' }}
           color="white"
         >
-          <Box fontSize={{ base: '24px', md: '36px' }} mb={{ base: 5, md: 10 }}>
-            {t('WCGMarketsPromotionTool')}
-          </Box>
+          <InViewSlideFade>
+            <Box
+              fontSize={{ base: '24px', md: '36px' }}
+              mb={{ base: 5, md: 10 }}
+            >
+              {t('WCGMarketsPromotionTool')}
+            </Box>
+          </InViewSlideFade>
 
           <Flex>
             <PromotionEach
@@ -62,19 +68,21 @@ const PromotionEach: React.FC<PromotionEachProps> = ({
   text
 }: PromotionEachProps) => {
   return (
-    <Flex
-      bgImage={imageSrc}
-      bgSize="cover"
-      width={{ base: '140px', md: '327px' }}
-      height={{ base: '140px', md: '327px' }}
-      m={{ base: 5, md: 5 }}
-      justify="center"
-      align="flex-end"
-    >
-      <Box mb={{ base: 5, md: 10 }} fontSize={{ base: '14px', md: '30px' }}>
-        {text}
-      </Box>
-    </Flex>
+    <InViewSlideFade>
+      <Flex
+        bgImage={imageSrc}
+        bgSize="cover"
+        width={{ base: '140px', md: '327px' }}
+        height={{ base: '140px', md: '327px' }}
+        m={{ base: 5, md: 5 }}
+        justify="center"
+        align="flex-end"
+      >
+        <Box mb={{ base: 5, md: 10 }} fontSize={{ base: '14px', md: '30px' }}>
+          {text}
+        </Box>
+      </Flex>
+    </InViewSlideFade>
   );
 };
 
