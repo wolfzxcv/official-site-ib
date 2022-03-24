@@ -16,7 +16,7 @@ const RedBlock: React.FC<{}> = () => {
       py={{ base: 10, md: '50px' }}
     >
       <Flex
-        width="90vw"
+        width="98vw"
         maxW="1200px"
         flexDir={{ base: 'column-reverse', xl: 'row' }}
         justify="space-between"
@@ -24,7 +24,7 @@ const RedBlock: React.FC<{}> = () => {
       >
         <Flex
           flexDir="column"
-          width={{ base: '100%', xl: '50%' }}
+          width={{ base: '90%', xl: '50%' }}
           justify={{ base: 'auto', xl: 'center' }}
           my={{ base: 10, md: 0 }}
         >

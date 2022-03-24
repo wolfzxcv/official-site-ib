@@ -14,17 +14,10 @@ const RedBlockDiagram: React.FC<{}> = () => {
     <StyledRedBlockDiagram>
       {/* row 1 */}
       <Flex justify="center" align="flex-end">
-        <StyledCard
-          className="one"
-          width={{ base: '100px', xl: '130px' }}
-          height={{ base: '120px', xl: '150px' }}
-        >
-          <Box m={3} textAlign="center">
-            <FaDotCircle />
-          </Box>
-          <Provider />
-          <Box textAlign="center">1</Box>
-        </StyledCard>
+        <CardEach
+          animation={`${cardOneAnimation} 4s infinite alternate`}
+          cardNo={1}
+        />
 
         <div className="empty-one">
           <div className="bigger-one left">
@@ -35,32 +28,17 @@ const RedBlockDiagram: React.FC<{}> = () => {
           </div>
         </div>
 
-        <StyledCard
-          className="three"
-          width={{ base: '100px', xl: '130px' }}
-          height={{ base: '120px', xl: '150px' }}
-        >
-          <Box m={3} textAlign="center">
-            <FaDotCircle />
-          </Box>
-          <Provider />
-          <Box textAlign="center">3</Box>
-        </StyledCard>
+        <CardEach
+          animation={`${cardThreeAnimation} 4s infinite alternate`}
+          cardNo={3}
+        />
       </Flex>
-
       {/* row 2 */}
       <Flex justify="center" align="flex-end">
-        <StyledCard
-          className="two"
-          width={{ base: '100px', xl: '130px' }}
-          height={{ base: '120px', xl: '150px' }}
-        >
-          <Box m={3} textAlign="center">
-            <FaDotCircle />
-          </Box>
-          <Provider />
-          <Box textAlign="center">2</Box>
-        </StyledCard>
+        <CardEach
+          animation={`${cardTwoAnimation} 4s infinite alternate`}
+          cardNo={2}
+        />
 
         <div className="bridge-two">
           <div className="upper-one left"></div>
@@ -70,6 +48,7 @@ const RedBlockDiagram: React.FC<{}> = () => {
         <Image
           src="../assets/images/home_red_block_logo.png"
           pb={10}
+          mx={{ base: 0, md: 3 }}
           alt="logo"
         />
 
@@ -78,46 +57,39 @@ const RedBlockDiagram: React.FC<{}> = () => {
           <div className="lower-one right"></div>
         </div>
 
-        <StyledCard
-          className="four"
-          width={{ base: '100px', xl: '130px' }}
-          height={{ base: '120px', xl: '150px' }}
-        >
-          <Box m={3} textAlign="center">
-            <FaDotCircle />
-          </Box>
-          <Provider />
-          <Box textAlign="center">4</Box>
-        </StyledCard>
+        <CardEach
+          animation={`${cardFourAnimation} 4s infinite alternate`}
+          cardNo={4}
+        />
       </Flex>
-
       {/* row 3 */}
       <Flex justify="center" align="flex-end">
         <div className="bridge-three left"></div>
         <div className="bridge-three right"></div>
       </Flex>
-
       {/* row 4 */}
       <Flex justify="center" align="flex-end">
         <div className="buy-in">{t('BuyingRate')}</div>
-        <div className="empty-four"></div>
+        <Box width="30px" height="20px"></Box>
         <div className="sell-out">{t('SellingRate')}</div>
       </Flex>
 
       {/* row 5 */}
       <Flex justify="center">
         <div className="left"></div>
-        <div className="middle">
-          <div>{t('SPREAD')}</div>
-        </div>
+        <Box width="100px" height="80px" textAlign="center" pt={6}>
+          {t('SPREAD')}
+        </Box>
         <div className="right"></div>
       </Flex>
 
       {/* row 6 */}
-      <Flex justify="center" align="flex-end">
-        <div className="arrow-six">
-          <ImArrowDown fontSize="26px" />
-        </div>
+      <Flex
+        justify="center"
+        animation={`${movement} 0.5s infinite linear`}
+        position="relative"
+      >
+        <ImArrowDown fontSize="26px" />
       </Flex>
 
       {/* row 7 */}
@@ -129,7 +101,12 @@ const RedBlockDiagram: React.FC<{}> = () => {
   );
 };
 
-const Provider: React.FC<{}> = () => {
+type CardEachProps = {
+  animation: string;
+  cardNo: number;
+};
+
+const CardEach: React.FC<CardEachProps> = ({ animation, cardNo }) => {
   const { t } = useTranslation('common');
 
   const router = useRouter();
@@ -138,14 +115,31 @@ const Provider: React.FC<{}> = () => {
   const isChinese = currentLang === 'cn' || currentLang === 'zh';
   return (
     <Box
-      height={{ base: 'auto', xl: '80px' }}
-      fontWeight={700}
-      fontSize={{ base: '16px', xl: isChinese ? '22px' : 'inherit' }}
-      px={isChinese ? 6 : 5}
-      pt={isChinese ? 0 : 6}
-      textAlign="center"
+      width={{ base: '100px', xl: '130px' }}
+      height={{ base: '120px', xl: '150px' }}
+      animation={animation}
+      borderRadius="20px"
+      boxShadow={'rgba(0, 0, 0, 0.25) 0px 3px 3px'}
+      my={3}
+      bgColor="white"
     >
-      {t('PROVIDER')}
+      <Box m={3} textAlign="center">
+        <FaDotCircle />
+      </Box>
+      <Box
+        height={{ base: 'auto', xl: '80px' }}
+        fontWeight={700}
+        fontSize={{
+          base: isChinese ? '20px' : '14px',
+          xl: isChinese ? '22px' : 'inherit'
+        }}
+        px={{ base: 2, xl: isChinese ? 6 : 5 }}
+        pt={isChinese ? 0 : 6}
+        textAlign="center"
+      >
+        {t('PROVIDER')}
+      </Box>
+      <Box textAlign="center">{cardNo}</Box>
     </Box>
   );
 };
@@ -192,11 +186,11 @@ const cardOneAnimation = keyframes`
   }
 
   50% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   100% {
-    color: gray;
+    color: #B1BDC4;
   }
 `;
 
@@ -222,20 +216,20 @@ const leftLineOne = keyframes`
   }
 
   50% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 3px 15px, 15px 0px, 0px 15px;
     background-position: left top, right top, right bottom, left bottom;
   }
 
   100% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 3px 15px, 15px 0px, 0px 15px;
     background-position: right top, right bottom, left bottom, left top;
@@ -244,11 +238,11 @@ const leftLineOne = keyframes`
 
 const cardTwoAnimation = keyframes`
   0% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   49% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   50% {
@@ -262,20 +256,20 @@ const cardTwoAnimation = keyframes`
 
 const leftLineTwo = keyframes`
   0% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: left top, right top, right bottom, left bottom;
   }
 
   49% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: right top, right bottom, left bottom, left top;
@@ -304,58 +298,58 @@ const leftLineTwo = keyframes`
 
 const cardThreeAnimation = keyframes`
   0% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   24% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   25% {
-    color: #78f78b;
+    color: #7aed28;
   }
 
   100% {
-    color: #78f78b;
+    color: #7aed28;
   }
 `;
 
 const rightLineOne = keyframes`
   0% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
     background-position: right top, right bottom, left bottom, left top;
   }
 
   49% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
     background-position: left top, right top, right bottom, left bottom;
   }
 
   50% {
-    background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%),
-      linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%);
+    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%),
+      linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
     background-position: right top, right bottom, left bottom, left top;
   }
 
   100% {
-    background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%),
-      linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%);
+    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%),
+      linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
     background-position: left top, right top, right bottom, left bottom;
@@ -364,84 +358,61 @@ const rightLineOne = keyframes`
 
 const cardFourAnimation = keyframes`
   0% {
-    color: #78f78b;
+    color: #7aed28;
   }
 
   24% {
-    color: #78f78b;
+    color: #7aed28;
   }
 
   25% {
-    color: gray;
+    color: #B1BDC4;
   }
 
   100% {
-    color: gray;
+    color: #B1BDC4;
   }
 `;
 
 const rightLineTwo = keyframes`
   0% {
-    background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%),
-      linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%);
+    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%),
+      linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: right top, right bottom, left bottom, left top;
   }
 
   49% {
-    background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%),
-      linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%);
+    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%),
+      linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: left top, right top, right bottom, left bottom;
   }
 
   50% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: right top, right bottom, left bottom, left top;
   }
 
   100% {
-    background: linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%),
-      linear-gradient(90deg, gray 50%, transparent 50%),
-      linear-gradient(0deg, gray 50%, transparent 50%);
+    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
+      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
     background-position: left top, right top, right bottom, left bottom;
-  }
-`;
-
-const StyledCard = styled(Box)`
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
-  margin: 10px 0;
-  background-color: white;
-
-  &.one {
-    animation: ${cardOneAnimation} 4s infinite alternate;
-  }
-
-  &.two {
-    animation: ${cardTwoAnimation} 4s infinite alternate;
-  }
-
-  &.three {
-    animation: ${cardThreeAnimation} 4s infinite alternate;
-  }
-
-  &.four {
-    animation: ${cardFourAnimation} 4s infinite alternate;
   }
 `;
 
@@ -449,15 +420,28 @@ const StyledRedBlockDiagram = styled.div`
   /* row 1 */
   .empty-one {
     width: 100px;
-    height: 150px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: 50px;
+
+    @media (min-width: 1280px) {
+      height: 130px;
+      top: 50px;
+    }
+
+    @media (max-width: 1279px) {
+      height: 100px;
+      top: 30px;
+    }
 
     .bigger-one {
       width: 25px;
       height: 100%;
+
+      .smaller-one {
+        width: 10px;
+        height: 80%;
+      }
 
       &.left {
         display: flex;
@@ -466,10 +450,10 @@ const StyledRedBlockDiagram = styled.div`
         animation: ${leftLineOne} 8s infinite linear;
 
         .smaller-one {
-          background: linear-gradient(90deg, gray 50%, transparent 50%),
-            linear-gradient(0deg, gray 50%, transparent 50%),
-            linear-gradient(90deg, gray 50%, transparent 50%),
-            linear-gradient(0deg, gray 50%, transparent 50%);
+          background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
           background-repeat: repeat-x, repeat-y;
           background-size: 15px 3px, 3px 15px, 15px 0px, 0px 15px;
           padding: 3px;
@@ -481,10 +465,10 @@ const StyledRedBlockDiagram = styled.div`
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        background: linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%),
-          linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%);
+        background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
         background-repeat: repeat-x, repeat-y;
         background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
         padding: 3px;
@@ -495,24 +479,27 @@ const StyledRedBlockDiagram = styled.div`
           animation: ${rightLineOne} 8s infinite linear;
         }
       }
-
-      .smaller-one {
-        width: 10px;
-        height: 130px;
-      }
     }
   }
 
   /* row 2 */
   .bridge-two {
-    width: 100px;
+    width: 80px;
     height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
+    @media (min-width: 769px) {
+      width: 80px;
+    }
+
+    @media (max-width: 768px) {
+      width: 40px;
+    }
+
     .upper-one {
-      width: 100px;
+      width: 100%;
       height: 60px;
       box-sizing: border-box;
 
@@ -522,10 +509,10 @@ const StyledRedBlockDiagram = styled.div`
       }
 
       &.right {
-        background: linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%),
-          linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%);
+        background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
         background-repeat: repeat-x, repeat-y;
         background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
         padding: 3px;
@@ -534,15 +521,15 @@ const StyledRedBlockDiagram = styled.div`
     }
 
     .lower-one {
-      width: 100px;
+      width: 100%;
       height: 30px;
       box-sizing: border-box;
 
       &.left {
-        background: linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%),
-          linear-gradient(90deg, gray 50%, transparent 50%),
-          linear-gradient(0deg, gray 50%, transparent 50%);
+        background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+          linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
         background-repeat: repeat-x, repeat-y;
         background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
         padding: 3px;
@@ -573,10 +560,10 @@ const StyledRedBlockDiagram = styled.div`
     }
 
     &.right {
-      background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-        linear-gradient(0deg, #78f78b 50%, transparent 50%),
-        linear-gradient(90deg, #78f78b 50%, transparent 50%),
-        linear-gradient(0deg, #78f78b 50%, transparent 50%);
+      background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+        linear-gradient(0deg, #7aed28 50%, transparent 50%),
+        linear-gradient(90deg, #7aed28 50%, transparent 50%),
+        linear-gradient(0deg, #7aed28 50%, transparent 50%);
       background-repeat: repeat-x, repeat-y;
       background-size: 15px 0px, 3px 15px, 15px 0px, 0px 15px;
       padding: 3px;
@@ -600,12 +587,7 @@ const StyledRedBlockDiagram = styled.div`
   }
 
   .sell-out {
-    background-color: #78f78b;
-  }
-
-  .empty-four {
-    width: 30px;
-    height: 20px;
+    background-color: #7aed28;
   }
 
   /* row 5 */
@@ -643,31 +625,14 @@ const StyledRedBlockDiagram = styled.div`
   }
 
   .right {
-    background: linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%),
-      linear-gradient(90deg, #78f78b 50%, transparent 50%),
-      linear-gradient(0deg, #78f78b 50%, transparent 50%);
+    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%),
+      linear-gradient(90deg, #7aed28 50%, transparent 50%),
+      linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 3px 15px, 15px 3px, 0px 15px;
     padding: 3px;
     animation: ${clockwise} 1s infinite linear;
-  }
-
-  /* row 6 */
-  .arrow-six {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    animation: ${movement} 0.5s infinite linear;
-  }
-
-  .client {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: darkblue;
-    text-align: center;
-    line-height: 5;
   }
 `;
 
