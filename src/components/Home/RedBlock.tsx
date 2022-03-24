@@ -1,15 +1,12 @@
-import { Locales } from '@/i18n/config';
 import { Box, Flex, Image, Stack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
 import React from 'react';
 import InViewSlideFade from '../Common/InViewSlideFade';
+import RedBlockDiagram from './RedBlockDiagram';
 
 const RedBlock: React.FC<{}> = () => {
   const { t } = useTranslation('common');
 
-  const router = useRouter();
-  const currentLang = router.locale as Locales;
   return (
     <Flex
       bg="#b81c22"
@@ -20,14 +17,15 @@ const RedBlock: React.FC<{}> = () => {
     >
       <Flex
         width="90vw"
-        maxW="1100px"
-        wrap="wrap-reverse"
+        maxW="1200px"
+        flexDir={{ base: 'column-reverse', xl: 'row' }}
         justify="space-between"
+        align={{ base: 'center', xl: 'auto' }}
       >
         <Flex
           flexDir="column"
-          width={{ base: '100%', md: '50%' }}
-          justify={{ base: 'auto', md: 'center' }}
+          width={{ base: '100%', xl: '50%' }}
+          justify={{ base: 'auto', xl: 'center' }}
           my={{ base: 10, md: 0 }}
         >
           <InViewSlideFade>
@@ -72,12 +70,14 @@ const RedBlock: React.FC<{}> = () => {
             <Box>{t('WeBringYouTheBest')}</Box>
           </InViewSlideFade>
         </Flex>
-        <Flex width={{ base: '100%', md: '50%' }} my={{ base: 10, md: 0 }}>
+        <Flex
+          width={{ base: '100%', xl: '50%' }}
+          mt={{ base: 10, xl: 0 }}
+          mb={{ base: 10, md: '100px', xl: 0 }}
+          justify="center"
+        >
           <InViewSlideFade>
-            <Image
-              src={`../assets/images/home_red_block_${currentLang}.png`}
-              alt="home_red_block_pic"
-            />
+            <RedBlockDiagram />
           </InViewSlideFade>
         </Flex>
       </Flex>

@@ -50,6 +50,16 @@ export type Common = {
   ProvidesStateOfTheArt: string;
   /** We bring you the best */
   WeBringYouTheBest: string;
+  /** PROVIDER */
+  PROVIDER: string;
+  /** Buying Rate */
+  BuyingRate: string;
+  /** Selling Rate */
+  SellingRate: string;
+  /** SPREAD */
+  SPREAD: string;
+  /** CLIENT */
+  CLIENT: string;
   /** media awards 1 */
   mediaAwards1: string;
   /** media awards 2 */

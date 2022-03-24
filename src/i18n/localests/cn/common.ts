@@ -27,6 +27,11 @@ export const common: Common = {
   ProvidesStateOfTheArt: '提供最先进的连接服务器',
   WeBringYouTheBest:
     '我们为您带来最佳的市场广度和深度的流动性。 我们的智能订单路由利用 WCG MARKETS 的最先进的定价引擎来支持多层最佳买/卖的汇总，从而以深层流动性池中可用的最佳价格执行您的订单。 这使您能够以真正具有竞争力的价格交易广泛的市场。',
+  PROVIDER: '流动性提供商',
+  BuyingRate: '买入价',
+  SellingRate: '卖出价',
+  SPREAD: '点差',
+  CLIENT: '客户交易端',
   mediaAwards1:
     'WCG MARKETS 实力雄厚，一直都以诚实可靠，卓越优质的服务而为熟悉。现专业实力更再获认可，于专业认可的贸易场中数百位行员当中只有约二十位行员能获得 GTP Certified 征章。',
   mediaAwards2:

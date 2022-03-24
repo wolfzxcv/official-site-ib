@@ -30,6 +30,11 @@ export const common: Common = {
   ProvidesStateOfTheArt: 'Provides state-of-the-art connection servers',
   WeBringYouTheBest:
     "We bring you the best market breadth and depth of liquidity. Our smart order routing leverages WCG MARKETS' state-of-the-art pricing engine to support multi-tier aggregation of best bids/asks to execute your orders at the best prices available in deep liquidity pools. This enables you to trade a wide range of markets at truly competitive prices.",
+  PROVIDER: 'PROVIDER',
+  BuyingRate: 'Buying Rate',
+  SellingRate: 'Selling Rate',
+  SPREAD: 'SPREAD',
+  CLIENT: 'CLIENT',
   mediaAwards1:
     'WCG MARKETS is strong and has always been known for its honesty, reliability, and excellent quality service. Now the professional strength has been recognized again, and only about twenty of the hundreds of employees in the professional exchange society can obtain the GTP Certified badge.',
   mediaAwards2:
