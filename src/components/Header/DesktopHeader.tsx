@@ -53,13 +53,13 @@ const DesktopHeader: React.FC<{}> = () => {
 
           <ClickLink
             text={t('login')}
-            href={links.iBCenterNew}
+            href={links.usersCenter}
             imageSrc="../assets/images/login.png"
           />
 
           <ClickLink
             text={t('register')}
-            href={links.iBCenterNew}
+            href={links.registerReal}
             border="2px"
             borderColor="#29a643"
             bg="#29a643"
