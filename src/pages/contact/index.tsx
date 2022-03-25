@@ -14,6 +14,7 @@ const contact: React.FC<{}> = () => {
   return (
     <Wrapper>
       <Flex
+        bgColor="#e45729"
         height="395px"
         bgImage="../assets/images/contact_banner.jpg"
         bgPosition="center"
