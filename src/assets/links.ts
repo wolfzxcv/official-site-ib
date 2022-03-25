@@ -12,13 +12,13 @@ export const links = {
   mt4APP:
     'https://download.mql5.com/cdn/web/17749/mt4/wenchuangloballtd4setup.exe',
   // 真實帳戶
-  registerReal: 'https://my.wcgmarkets.com/',
+  registerReal: 'https://my.wcgmarkets.com/register',
   // 模擬帳戶
   registerDemo: 'https://trader.wc012.com/registerMock',
   // 舊客戶中心
   usersCenterOld: 'https://trader.wc012.com/login',
   // 新客戶中心
-  usersCenterNew: 'https://my.wcgmarkets.com/',
+  usersCenterNew: 'https://my.wcgmarkets.com/login',
   // 舊代理中心
   iBCenterOld: 'https://broker.wc012.com',
   // 新代理中心

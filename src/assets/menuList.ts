@@ -18,14 +18,14 @@ export const menuList: IMenuItem[] = [
   //   i18n: 'agent',
   //   href: '/agent'
   // },
-  {
-    i18n: 'promotion',
-    href: '/promotion'
-  },
-  {
-    i18n: 'activity',
-    href: '/activity'
-  },
+  // {
+  //   i18n: 'promotion',
+  //   href: '/promotion'
+  // },
+  // {
+  //   i18n: 'activity',
+  //   href: '/activity'
+  // },
   {
     i18n: 'contact',
     href: '/contact'
