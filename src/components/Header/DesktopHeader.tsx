@@ -59,7 +59,7 @@ const DesktopHeader: React.FC<{}> = () => {
 
           <ClickLink
             text={t('register')}
-            href={links.registerReal}
+            onClick={openChatWindow}
             border="2px"
             borderColor="#29a643"
             bg="#29a643"
