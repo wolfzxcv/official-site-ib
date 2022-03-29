@@ -27,7 +27,7 @@ const MobileHeader: React.FC<{}> = () => {
 
   return (
     <>
-      <Flex fontWeight="600" justify="space-between" p={3}>
+      <Flex fontWeight="600" justify="space-between" p={3} bg="white">
         <ClickLink
           text={t('register')}
           onClick={openChatWindow}
