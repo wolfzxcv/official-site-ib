@@ -28,19 +28,10 @@ const activity: React.FC<{}> = () => {
           <Box fontSize={{ base: '24px', md: '36px' }}>{t('Promotions')}</Box>
           <Flex wrap="wrap" px={5} justify="center">
             <ActivityEach
-              imageSrc="../assets/images/activity_01.jpg"
-              summary={t('GoldDecemberAgency')}
-            />
-
-            <ActivityEach
-              imageSrc="../assets/images/activity_02.jpg"
-              summary={t('DealRebateFirstHit')}
-            />
-
-            <ActivityEach
-              imageSrc="../assets/images/activity_03.jpg"
-              summary={t('TradingGiftsTripleBonus')}
-              href="https://glb.012wenchuan.com/activity/JYSL"
+              imageSrc="../assets/images/activity_05.jpg"
+              summary={t('ANoteOnWeiboForBonus')}
+              href="https://glb.012wenchuan.com"
+              isFinished={false}
             />
 
             <ActivityEach
@@ -50,10 +41,19 @@ const activity: React.FC<{}> = () => {
             />
 
             <ActivityEach
-              imageSrc="../assets/images/activity_05.jpg"
-              summary={t('ANoteOnWeiboForBonus')}
-              href="https://glb.012wenchuan.com"
-              isFinished={false}
+              imageSrc="../assets/images/activity_03.jpg"
+              summary={t('TradingGiftsTripleBonus')}
+              href="https://glb.012wenchuan.com/activity/JYSL"
+            />
+
+            <ActivityEach
+              imageSrc="../assets/images/activity_02.jpg"
+              summary={t('DealRebateFirstHit')}
+            />
+
+            <ActivityEach
+              imageSrc="../assets/images/activity_01.jpg"
+              summary={t('GoldDecemberAgency')}
             />
           </Flex>
         </Flex>

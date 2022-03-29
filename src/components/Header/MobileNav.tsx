@@ -1,6 +1,5 @@
 import { IMenuItem, menuList } from '@/assets/menuList';
 import { Locales } from '@/i18n/config';
-import { openChatWindow } from '@/utils';
 import {
   Box,
   Drawer,
@@ -27,11 +26,6 @@ const MobileNav: React.FC<MobileNavProps> = ({
 }: MobileNavProps) => {
   const { t } = useTranslation('header');
 
-  const handleOpenChatWindow = () => {
-    onClose();
-    openChatWindow();
-  };
-
   return (
     <Drawer
       placement={'left'}
@@ -56,7 +50,6 @@ const MobileNav: React.FC<MobileNavProps> = ({
                 href={each.href}
               />
             ))}
-            <MobileNavItemBase i18n="liveChat" onClick={handleOpenChatWindow} />
           </Flex>
         </DrawerBody>
       </DrawerContent>

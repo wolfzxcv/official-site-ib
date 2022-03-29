@@ -48,8 +48,10 @@ export type Common = {
   PoweredByWCGMarkets: string;
   /** Provides state-of-the-art */
   ProvidesStateOfTheArt: string;
-  /** We bring you the best */
-  WeBringYouTheBest: string;
+  /** Use the most stable */
+  UseTheMostStable: string;
+  /** WCG Markets bring you the best */
+  WCGMarketsBringYouTheBest: string;
   /** PROVIDER */
   PROVIDER: string;
   /** Buying Rate */

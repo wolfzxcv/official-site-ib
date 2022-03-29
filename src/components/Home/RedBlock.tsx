@@ -64,10 +64,17 @@ const RedBlock: React.FC<{}> = () => {
                 <Box>{t('ProvidesStateOfTheArt')}</Box>
               </Flex>
             </InViewSlideFade>
+
+            <InViewSlideFade>
+              <Flex align="center">
+                <Tick />
+                <Box>{t('UseTheMostStable')}</Box>
+              </Flex>
+            </InViewSlideFade>
           </Stack>
 
           <InViewSlideFade>
-            <Box>{t('WeBringYouTheBest')}</Box>
+            <Box>{t('WCGMarketsBringYouTheBest')}</Box>
           </InViewSlideFade>
         </Flex>
         <Flex

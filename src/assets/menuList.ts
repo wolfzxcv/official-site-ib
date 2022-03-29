@@ -22,10 +22,10 @@ export const menuList: IMenuItem[] = [
   //   i18n: 'promotion',
   //   href: '/promotion'
   // },
-  // {
-  //   i18n: 'activity',
-  //   href: '/activity'
-  // },
+  {
+    i18n: 'activity',
+    href: '/activity'
+  },
   {
     i18n: 'contact',
     href: '/contact'

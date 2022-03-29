@@ -1,8 +1,12 @@
+import { links } from '@/assets/links';
+import { openChatWindow } from '@/utils';
 import { Box, Flex, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { ImEarth } from 'react-icons/im';
+import { ClickLink } from './DesktopHeader';
+import Logo from './Logo';
 import MobileLangSelector from './MobileLangSelector';
 import MobileNav from './MobileNav';
 
@@ -23,6 +27,28 @@ const MobileHeader: React.FC<{}> = () => {
 
   return (
     <>
+      <Flex fontWeight="600" justify="space-between" p={3}>
+        <ClickLink
+          text={t('register')}
+          onClick={openChatWindow}
+          border="2px"
+          borderColor="#29a643"
+          bg="#29a643"
+          color="white"
+        />
+
+        <ClickLink
+          text={t('liveChat')}
+          onClick={openChatWindow}
+          imageSrc="../assets/images/live_chat.png"
+        />
+
+        <ClickLink
+          text={t('login')}
+          href={links.usersCenter}
+          imageSrc="../assets/images/login.png"
+        />
+      </Flex>
       <Flex
         px="5"
         bg="white"
@@ -36,6 +62,9 @@ const MobileHeader: React.FC<{}> = () => {
           <AiOutlineMenu />
           <Box ml="2">{t('menu').toUpperCase()}</Box>
         </Flex>
+
+        <Logo />
+
         <Flex onClick={onOpenMobileLangSelector} align="center">
           <Box mr="2">{t('language').toUpperCase()}</Box>
           <ImEarth />
