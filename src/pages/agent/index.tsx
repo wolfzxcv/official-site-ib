@@ -70,7 +70,7 @@ const agent: React.FC<{}> = () => {
             />
             <AgentEach
               imageSrc="../assets/images/agent_05.png"
-              text={t('BecomeOurBrokerRightNow')}
+              text={t('ProvideYouWith')}
             />
             <AgentEach
               imageSrc="../assets/images/agent_06.png"

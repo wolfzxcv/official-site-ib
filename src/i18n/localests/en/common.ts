@@ -36,6 +36,10 @@ export const common: Common = {
   SellingRate: 'Selling Rate',
   SPREAD: 'SPREAD',
   CLIENT: 'CLIENT',
+  TopLiquidityProviders: '1: Top Liquidity Providers',
+  WCGMarketsFinancialTechnologyTeam: '2: WCG MARKETS Financial Technology Team',
+  ConnectToStateOfTheArtServers: '3: Connect to state-of-the-art servers',
+  TheMostStableMetaTrader: '4: The most stable MetaTrader trading system',
   mediaAwards1:
     'WCG MARKETS is strong and has always been known for its honesty, reliability, and excellent quality service. Now the professional strength has been recognized again, and only about twenty of the hundreds of employees in the professional exchange society can obtain the GTP Certified badge.',
   mediaAwards2:

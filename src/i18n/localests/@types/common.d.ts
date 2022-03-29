@@ -62,6 +62,14 @@ export type Common = {
   SPREAD: string;
   /** CLIENT */
   CLIENT: string;
+  /** Top Liquidity Providers */
+  TopLiquidityProviders: string;
+  /** WCG MARKETS Financial Technology Team */
+  WCGMarketsFinancialTechnologyTeam: string;
+  /** Connect to state-of-the-art servers */
+  ConnectToStateOfTheArtServers: string;
+  /** The most stable MetaTrader */
+  TheMostStableMetaTrader: string;
   /** media awards 1 */
   mediaAwards1: string;
   /** media awards 2 */

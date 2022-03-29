@@ -33,6 +33,10 @@ export const common: Common = {
   SellingRate: '卖出价',
   SPREAD: '点差',
   CLIENT: '客户交易端',
+  TopLiquidityProviders: '1: 顶级流动性提供商',
+  WCGMarketsFinancialTechnologyTeam: '2: WCG MARKETS 金融技术团队',
+  ConnectToStateOfTheArtServers: '3: 连接最先进的服务器',
+  TheMostStableMetaTrader: '4: 最稳定 MetaTrader 交易系统',
   mediaAwards1:
     'WCG MARKETS 实力雄厚，一直都以诚实可靠，卓越优质的服务而为熟悉。现专业实力更再获认可，于专业认可的贸易场中数百位行员当中只有约二十位行员能获得 GTP Certified 征章。',
   mediaAwards2:
