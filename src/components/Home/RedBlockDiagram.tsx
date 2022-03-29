@@ -70,7 +70,7 @@ const RedBlockDiagram: React.FC<{}> = () => {
       <Flex>
         <Flex height="100%" flexDir="column" justify="center">
           <Box
-            height="5px"
+            height="3px"
             width="20px"
             animation={`${clockwise} 1s infinite`}
           ></Box>
@@ -79,7 +79,8 @@ const RedBlockDiagram: React.FC<{}> = () => {
         <Flex height="100%" flexDir="column" justify="center" mr={2}>
           <Flex
             height="100px"
-            width="20px"
+            width="30px"
+            justify="flex-end"
             align="flex-end"
             animation={`${lineOne} 10s infinite`}
           >
@@ -91,13 +92,14 @@ const RedBlockDiagram: React.FC<{}> = () => {
           </Flex>
           <Flex
             height="100px"
-            width="20px"
-            animation={`${lineThree} 10s infinite`}
+            width="30px"
+            justify="flex-end"
+            animation={`${lineFour} 10s infinite`}
           >
             <Box
               height="40px"
               width="20px"
-              animation={`${lineFour} 10s infinite`}
+              animation={`${lineThree} 10s infinite`}
             ></Box>
           </Flex>
         </Flex>
@@ -207,27 +209,27 @@ const lineOne = keyframes`
       linear-gradient(90deg, #7aed28 50%, transparent 50%),
       linear-gradient(0deg, #7aed28 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;    
+    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
     background-position: right top, right bottom, left bottom, left top;
   }
 
   25% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;    
+    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
   }
 
   100% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;   
-  }
+    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+  } 
 `;
 
 const cardOneAnimation = keyframes`
@@ -240,29 +242,29 @@ const cardOneAnimation = keyframes`
   }
 
   25% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   100% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 `;
 
 const lineTwo = keyframes`
   0% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
   }
 
   24% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
   }
@@ -288,19 +290,19 @@ const lineTwo = keyframes`
   }
 
   50% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
   }
 
   100% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
   }
@@ -308,11 +310,11 @@ const lineTwo = keyframes`
 
 const cardTwoAnimation = keyframes`
   0% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   24% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   25% {
@@ -324,22 +326,23 @@ const cardTwoAnimation = keyframes`
   }
 
   50% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   100% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 `;
 
 const lineThree = keyframes`
   0% {
-    background: linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(90deg, #B1BDC4 50%, transparent 50%),
-      linear-gradient(0deg, #B1BDC4 50%, transparent 50%);
+    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
+            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: right top, right bottom, left bottom, left top;   
   }
 
   49% {
@@ -349,6 +352,7 @@ const lineThree = keyframes`
             linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: right top, right bottom, left bottom, left top;   
   }
 
   50% {
@@ -366,7 +370,7 @@ const lineThree = keyframes`
       linear-gradient(0deg, #7aed28 50%, transparent 50%),
       linear-gradient(90deg, #7aed28 50%, transparent 50%),
       linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
+      background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
     background-position: left top, right top, right bottom, left bottom;
   } 
@@ -378,6 +382,7 @@ const lineThree = keyframes`
             linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: left top, right top, right bottom, left bottom;  
   }
 
   100% {
@@ -387,16 +392,17 @@ const lineThree = keyframes`
             linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: left top, right top, right bottom, left bottom;  
   }
 `;
 
 const cardThreeAnimation = keyframes`
   0% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   49% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   50% {
@@ -408,11 +414,11 @@ const cardThreeAnimation = keyframes`
   }
 
   75% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   100% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 `;
 
@@ -424,6 +430,7 @@ const lineFour = keyframes`
             linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: right top, right bottom, left bottom, left top;   
   }
 
   74% {
@@ -433,6 +440,7 @@ const lineFour = keyframes`
             linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
     background-repeat: repeat-x, repeat-y;
     background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
+    background-position: right top, right bottom, left bottom, left top;   
   }
 
   75% {
@@ -458,11 +466,11 @@ const lineFour = keyframes`
 
 const cardFourAnimation = keyframes`
   0% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   74% {
-    color: #B1BDC4;
+    color: #b1bdc4;
   }
 
   75% {
