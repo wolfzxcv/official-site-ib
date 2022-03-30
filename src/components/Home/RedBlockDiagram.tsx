@@ -72,7 +72,10 @@ const RedBlockDiagram: React.FC<{}> = () => {
           <Box
             height="3px"
             width="20px"
-            animation={`${clockwise} 1s infinite`}
+            bgImg="linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%)"
+            bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            bgSize="15px 3px, 0px 15px, 15px 0px, 0px 15px"
+            animation={`${clockwise} 1s infinite linear`}
           ></Box>
         </Flex>
 
@@ -82,24 +85,36 @@ const RedBlockDiagram: React.FC<{}> = () => {
             width="30px"
             justify="flex-end"
             align="flex-end"
-            animation={`${lineOne} 10s infinite`}
+            bgImg="linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%)"
+            bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            bgSize="15px 3px, 15px 0px, 3px 15px, 0px 15px"
+            animation={`${lineOne} 10s infinite linear, ${clockwise} 1s infinite linear`}
           >
             <Box
               height="40px"
               width="20px"
-              animation={`${lineTwo} 10s infinite`}
+              bgImg="linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%)"
+              bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+              bgSize="15px 3px, 15px 0px, 3px 15px, 0px 15px"
+              animation={`${lineTwo} 10s infinite linear, ${clockwise} 1s infinite linear`}
             ></Box>
           </Flex>
           <Flex
             height="100px"
             width="30px"
             justify="flex-end"
-            animation={`${lineFour} 10s infinite`}
+            bgImg="linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%)"
+            bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            bgSize="15px 0px, 15px 3px, 3px 15px, 0px 15px"
+            animation={`${lineFour} 10s infinite, ${counterclockwise} 1s infinite linear`}
           >
             <Box
               height="40px"
               width="20px"
-              animation={`${lineThree} 10s infinite`}
+              bgImg="linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%)"
+              bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+              bgSize="15px 0px, 15px 3px, 3px 15px, 0px 15px"
+              animation={`${lineThree} 10s infinite, ${counterclockwise} 1s infinite linear`}
             ></Box>
           </Flex>
         </Flex>
@@ -172,63 +187,38 @@ const movement = keyframes`
 
 const clockwise = keyframes`
   0% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
-    background-position: left top, right top, right bottom, left bottom;
+    background-position: left top, right bottom, left bottom, right top;
+  }
+  100% {
+    background-position: left 15px top, right 15px bottom , left bottom 15px , right top 15px;
+  }
+`;
+
+const counterclockwise = keyframes`
+  0% {
+    background-position: left 15px top, right 15px bottom , left bottom 15px , right top 15px;
   }
 
   100% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 0px 15px;
-    background-position: right top, right bottom, left bottom, left top;
+    background-position:  left top, right bottom, left bottom, right top;
   }
 `;
 
 const lineOne = keyframes`
   0% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   24% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   25% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   100% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   } 
 `;
 
@@ -242,79 +232,47 @@ const cardOneAnimation = keyframes`
   }
 
   25% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   100% {
-    color: #b1bdc4;
+    color: silver;
   }
 `;
 
 const lineTwo = keyframes`
   0% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   24% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   25% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   49% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;    
-    background-position: right top, right bottom, left bottom, left top;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   50% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   100% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-      linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 3px, 0px 15px, 15px 0px, 3px 15px;
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 `;
 
 const cardTwoAnimation = keyframes`
   0% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   24% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   25% {
@@ -326,83 +284,47 @@ const cardTwoAnimation = keyframes`
   }
 
   50% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   100% {
-    color: #b1bdc4;
+    color: silver;
   }
 `;
 
 const lineThree = keyframes`
   0% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   49% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%); 
   }
 
   50% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   74% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-      background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   } 
 
   75% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;  
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   100% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;  
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 `;
 
 const cardThreeAnimation = keyframes`
   0% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   49% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   50% {
@@ -414,63 +336,39 @@ const cardThreeAnimation = keyframes`
   }
 
   75% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   100% {
-    color: #b1bdc4;
+    color: silver;
   }
 `;
 
 const lineFour = keyframes`
   0% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   74% {
-    background: linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(90deg, #b1bdc4 50%, transparent 50%),
-            linear-gradient(0deg, #b1bdc4 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(90deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%), linear-gradient(0deg, silver 50%, transparent 50%);
   }
 
   75% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: right top, right bottom, left bottom, left top;   
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   }
 
   100% {
-    background: linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%),
-      linear-gradient(90deg, #7aed28 50%, transparent 50%),
-      linear-gradient(0deg, #7aed28 50%, transparent 50%);
-      background-repeat: repeat-x, repeat-y;
-    background-size: 15px 0px, 0px 15px, 15px 3px, 3px 15px;
-    background-position: left top, right top, right bottom, left bottom;
+    background-image: linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(90deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%), linear-gradient(0deg, #7aed28 50%, transparent 50%);
   } 
 `;
 
 const cardFourAnimation = keyframes`
   0% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   74% {
-    color: #b1bdc4;
+    color: silver;
   }
 
   75% {
