@@ -7,7 +7,7 @@ const ProgressBar = dynamic(() => import('./ProgressBar'), { ssr: false });
 
 const arrowsPositionFromTheTop = '500px';
 
-const barPositionFromTheTop = '650px';
+const barPositionFromTheTop = '685px';
 
 const arrowColor = '#053d49';
 
