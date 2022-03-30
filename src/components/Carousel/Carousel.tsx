@@ -7,7 +7,9 @@ const ProgressBar = dynamic(() => import('./ProgressBar'), { ssr: false });
 
 const arrowsPositionFromTheTop = '500px';
 
-const barPositionFromTheTop = '685px';
+const barPositionFromTheTop = '650px';
+
+const barPositionFromTheTopMobile = '685px';
 
 const arrowColor = '#053d49';
 
@@ -162,7 +164,10 @@ const Carousel: React.FC<CarouselProps> = ({
         {type === 'bar' && (
           <Flex
             zIndex={5}
-            top={barPositionFromTheTop}
+            top={{
+              base: barPositionFromTheTopMobile,
+              md: barPositionFromTheTop
+            }}
             position="absolute"
             bg="transparent"
             width="100%"
