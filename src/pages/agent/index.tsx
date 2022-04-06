@@ -109,7 +109,10 @@ const agent: React.FC<{}> = () => {
                 flexDir="column"
                 align="center"
               >
-                <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
+                <Box
+                  mb={5}
+                  fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+                >
                   {t('WhiteLabelPartnershipProgram')}
                 </Box>
                 <Box>{t('AddressingHighEndCustomizationNeeds')}</Box>
@@ -121,7 +124,10 @@ const agent: React.FC<{}> = () => {
                 flexDir="column"
                 align="center"
               >
-                <Box mb={5} fontSize={{ base: '24px', md: '36px' }}>
+                <Box
+                  mb={5}
+                  fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+                >
                   {t('RegionalRepresentative')}
                 </Box>
                 <Box>{t('ThisIsAUniqueOpportunity')}</Box>

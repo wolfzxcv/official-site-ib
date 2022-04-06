@@ -24,10 +24,10 @@ export const feature: Feature = {
     'Provide partners with real-time support in multiple languages 24 hours a day, five days a week. A dedicated assigned account manager will give the partner proper guidance and help the partner.',
   ExtraMarketing: 'Extra Marketing Operation Sponsorship',
   ToTheQualifiedPartners:
-    'To the qualified partners, company will provide extra advertising or operational sponsorship.',
+    'To the qualified partners, WCG MARKETS will provide extra advertising or operational sponsorship.',
   YearEndBonus: 'Year-End Bonus',
   CommonProsperity:
-    'Common prosperity, special bonus will be issued at the end of the year to grow with us.',
+    'Common prosperity, special bonus will be issued at the end of the year to grow with WCG MARKETS.',
   VPNSupport: 'VPN Support',
   ProvideASafeNetwork:
     'Provide a safe network for business environment, so that partners can focus on developing their careers without worry.',
