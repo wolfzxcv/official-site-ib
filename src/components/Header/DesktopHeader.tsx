@@ -196,6 +196,7 @@ export const ClickLinkBase: React.FC<ClickLinkBaseProps> = ({
       mx="2"
       color={color}
       align="center"
+      width="max-content"
     >
       {imageSrc && (
         <Image width="13px" height="13px" mr="2" src={imageSrc} alt={text} />

@@ -8,6 +8,15 @@ export const isIOS = () => {
   }
 };
 
+export const isHuawei = () => {
+  if (process.browser) {
+    return (
+      navigator.userAgent.match(/Huawei/i) ||
+      navigator.userAgent.match(/HUAWEI/i)
+    );
+  }
+};
+
 export const isUsingMobile = () => {
   if (process.browser) {
     return (

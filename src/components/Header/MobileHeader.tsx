@@ -1,6 +1,6 @@
 import { links } from '@/assets/links';
-import { openChatWindow } from '@/utils';
-import { Box, Flex, useDisclosure } from '@chakra-ui/react';
+import { isHuawei, isIOS, isUsingMobile, openChatWindow } from '@/utils';
+import { Box, Flex, Image, Link, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
@@ -27,7 +27,15 @@ const MobileHeader: React.FC<{}> = () => {
 
   return (
     <>
-      <Flex fontWeight="600" justify="space-between" p={1} bg="white">
+      <Flex
+        fontWeight="600"
+        justify="space-between"
+        align="center"
+        p={1}
+        mt={1}
+        bg="white"
+        fontSize="12px"
+      >
         <ClickLink
           text={t('register')}
           onClick={openChatWindow}
@@ -48,7 +56,36 @@ const MobileHeader: React.FC<{}> = () => {
           href={links.usersCenter}
           imageSrc="../assets/images/login.png"
         />
+
+        {isIOS() ? (
+          <Link href={links.mt4IOS} isExternal mr={2}>
+            <Image
+              width="70px"
+              src="../assets/images/banner_apple_store.jpg"
+              alt="Apple Store"
+            />
+          </Link>
+        ) : isHuawei() ? (
+          <Link href={links.mt4Huawei} isExternal mr={2}>
+            <Image
+              width="72px"
+              src="../assets/images/banner_google_play.jpg"
+              alt="Google Play"
+            />
+          </Link>
+        ) : isUsingMobile() ? (
+          <Link href={links.mt4Android} isExternal mr={2}>
+            <Image
+              width="72px"
+              src="../assets/images/banner_google_play.jpg"
+              alt="Google Play"
+            />
+          </Link>
+        ) : (
+          <> </>
+        )}
       </Flex>
+
       <Flex
         px="5"
         bg="white"

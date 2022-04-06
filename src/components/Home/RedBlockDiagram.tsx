@@ -58,12 +58,25 @@ const RedBlockDiagram: React.FC<{}> = () => {
       </Flex>
 
       {/* column 2 */}
-      <Flex justify="center" align="center">
+      <Flex flexDir="column" justify="space-evenly" align="center">
+        <Box width="100px" height="50px"></Box>
+
         <Image
           src="../assets/images/home_red_block_logo.png"
           mx={{ base: 0, md: 3 }}
           alt="logo"
         />
+
+        <Box width="100px" height="50px">
+          <Box
+            height="50px"
+            width="53px"
+            bgImg="linear-gradient(90deg, #176af3 50%, transparent 50%), linear-gradient(90deg, #176af3 50%, transparent 50%), linear-gradient(0deg, #176af3 50%, transparent 50%), linear-gradient(0deg, #176af3 50%, transparent 50%)"
+            bgRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            bgSize="15px 0px, 15px 3px, 15px 0px, 3px 15px"
+            animation={`${clockwise} 1s infinite linear`}
+          ></Box>
+        </Box>
       </Flex>
 
       {/* column 3 */}
