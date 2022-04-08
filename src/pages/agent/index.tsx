@@ -111,7 +111,11 @@ const agent: React.FC<{}> = () => {
               >
                 <Box
                   mb={5}
-                  fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+                  fontSize={{
+                    base: isChinese ? '24px' : '18px',
+                    md: isChinese ? '36px' : '26px'
+                  }}
+                  width="100%"
                 >
                   {t('WhiteLabelPartnershipProgram')}
                 </Box>
@@ -126,7 +130,11 @@ const agent: React.FC<{}> = () => {
               >
                 <Box
                   mb={5}
-                  fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+                  fontSize={{
+                    base: isChinese ? '24px' : '20px',
+                    md: isChinese ? '36px' : '26px'
+                  }}
+                  width="100%"
                 >
                   {t('RegionalRepresentative')}
                 </Box>
