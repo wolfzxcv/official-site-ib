@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) {
 function _possibleConstructorReturn(self, call) {
   if (!self) {
     throw new ReferenceError(
-      "this hasn't been initialised - super() hasn't been called"
+      "this hasn't been initialized - super() hasn't been called"
     );
   }
   return call && (typeof call === 'object' || typeof call === 'function')
@@ -110,8 +110,14 @@ var ParallaxProvider = (function (_React$Component) {
           if (_this.skrollr) _this.skrollr.refresh();
         }),
         (_this.isMobile = function () {
-          return /Android|iPhone|iPad|iPod|BlackBerry/i.test(
-            navigator.userAgent || navigator.vendor || window.opera
+          return (
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i)
           );
         }),
         (_this.shouldInitOrDestroy = function () {

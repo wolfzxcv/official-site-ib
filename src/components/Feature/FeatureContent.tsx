@@ -174,7 +174,7 @@ const FeatureContent: React.FC<{}> = () => {
               >
                 {t('HighStandardRebateProgram')}
               </Box>
-              <Box textAlign="left">{t('ProvideHighStandardAgency')}</Box>{' '}
+              <Box textAlign="left">{t('ProvideHighStandardAgency')}</Box>
             </Parallax>
           </Flex>
 
@@ -190,7 +190,7 @@ const FeatureContent: React.FC<{}> = () => {
               >
                 {t('InstantRebatePayment')}
               </Box>
-              <Box textAlign="left">{t('WCGMarketsFullyAutomated')}</Box>{' '}
+              <Box textAlign="left">{t('WCGMarketsFullyAutomated')}</Box>
             </Parallax>
           </Flex>
         </Flex>
@@ -205,7 +205,6 @@ const FeatureContent: React.FC<{}> = () => {
         borderRadius="30px"
         m={5}
         justify={{ base: 'center', md: 'flex-start' }}
-        ml={{ base: 0, md: 10 }}
         align="center"
       >
         <Flex
@@ -221,7 +220,7 @@ const FeatureContent: React.FC<{}> = () => {
             >
               {t('OneToOneLiveCustomerService')}
             </Box>
-            <Box textAlign="left">{t('ProvidePartnersWith')}</Box>{' '}
+            <Box textAlign="left">{t('ProvidePartnersWith')}</Box>
           </Parallax>
         </Flex>
       </Flex>
