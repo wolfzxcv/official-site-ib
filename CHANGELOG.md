@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/wolfzxcv/official-site-ib/compare/v1.3.8...v1.4.0) (2022-04-11)
+
+
+### Features
+
+* **skrollr:** feature page adds skrollr ([2d115fb](https://github.com/wolfzxcv/official-site-ib/commit/2d115fbed9170bc2a00cfc8b2bcf91bfd1a5bd4c))
+
 ### [1.3.8](https://github.com/wolfzxcv/official-site-ib/compare/v1.3.7...v1.3.8) (2022-04-06)
 
 ### [1.3.7](https://github.com/wolfzxcv/official-site-ib/compare/v1.3.6...v1.3.7) (2022-03-31)
