@@ -1,20 +1,42 @@
 import { Locales } from '@/i18n/config';
-import { Parallax, ParallaxProvider } from '@/plugins/react-skrollr';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
-const ParallaxSettingLeft = {
-  'data-top-top': 'transform: translateX(-100%);',
-  'data-center-center': 'opacity: 1;transform: translateX(0%);',
-  'data-bottom-top': 'opacity: 0;'
+type ParallaxSettingProps = {
+  children: React.ReactNode;
 };
 
-const ParallaxSettingRight = {
-  'data-top-top': 'transform: translateX(100%);',
-  'data-center-center': 'opacity: 1;transform: translateX(0%);',
-  'data-bottom-top': 'opacity: 0;'
+const ParallaxSettingLeft: React.FC<ParallaxSettingProps> = ({ children }) => {
+  return (
+    <Parallax translateX={[20, -20]} opacity={[0.6, 1]}>
+      {children}
+    </Parallax>
+  );
+};
+
+const ParallaxSettingRight: React.FC<ParallaxSettingProps> = ({ children }) => {
+  return (
+    <Parallax translateX={[-20, 20]} opacity={[0.6, 1]}>
+      {children}
+    </Parallax>
+  );
+};
+
+const ParallaxSettingSlow: React.FC<ParallaxSettingProps> = ({ children }) => {
+  return <Parallax speed={-5}>{children}</Parallax>;
+};
+
+const ParallaxSettingFast: React.FC<ParallaxSettingProps> = ({ children }) => {
+  return <Parallax speed={5}>{children}</Parallax>;
+};
+
+const ParallaxSettingRotate: React.FC<ParallaxSettingProps> = ({
+  children
+}) => {
+  return <Parallax rotate={[-180, 180]}>{children}</Parallax>;
 };
 
 const FeatureContent: React.FC<{}> = () => {
@@ -54,7 +76,7 @@ const FeatureContent: React.FC<{}> = () => {
             flexDir="column"
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
           >
-            <Parallax data={ParallaxSettingLeft}>
+            <ParallaxSettingSlow>
               <Box
                 fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
                 mb={3}
@@ -67,7 +89,7 @@ const FeatureContent: React.FC<{}> = () => {
               >
                 {t('WCGMarketsDoesNotSet')}
               </Box>
-            </Parallax>
+            </ParallaxSettingSlow>
           </Flex>
           <Flex
             flexDir="column"
@@ -75,12 +97,12 @@ const FeatureContent: React.FC<{}> = () => {
             width={isChinese ? '25%' : '35%'}
             mt={0}
           >
-            <Parallax data={ParallaxSettingRight}>
+            <ParallaxSettingFast>
               <Box fontSize={isChinese ? '36px' : '26px'} mb={3}>
                 {t('ManagementToolsProvided')}
               </Box>
               <Box textAlign="left">{t('WCGMarketsWillProvide')}</Box>
-            </Parallax>
+            </ParallaxSettingFast>
           </Flex>
         </Flex>
       </Flex>
@@ -98,17 +120,15 @@ const FeatureContent: React.FC<{}> = () => {
         px={5}
         color="black"
         fontWeight={600}
-        borderTop="1px"
-        borderColor="white"
       >
-        <Parallax data={ParallaxSettingRight}>
+        <ParallaxSettingFast>
           <Box fontSize="24px" mb={3} width="100%" textAlign="center">
             {t('ManagementToolsProvided')}
           </Box>
           <Box textAlign="left" fontSize={isChinese ? 'auto' : '12px'}>
             {t('WCGMarketsWillProvide')}
           </Box>
-        </Parallax>
+        </ParallaxSettingFast>
       </Flex>
 
       <Flex
@@ -129,7 +149,7 @@ const FeatureContent: React.FC<{}> = () => {
           mt={{ base: '50px', md: 0 }}
           mr={{ base: 0, md: '100px' }}
         >
-          <Parallax data={ParallaxSettingLeft}>
+          <ParallaxSettingLeft>
             <Box
               fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
               mb={3}
@@ -137,7 +157,7 @@ const FeatureContent: React.FC<{}> = () => {
               {t('FinancialSecurity')}
             </Box>
             <Box textAlign="left">{t('WCGMarketsIsCommitted')}</Box>
-          </Parallax>
+          </ParallaxSettingLeft>
         </Flex>
       </Flex>
 
@@ -167,7 +187,7 @@ const FeatureContent: React.FC<{}> = () => {
             flexDir="column"
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
           >
-            <Parallax data={ParallaxSettingLeft}>
+            <ParallaxSettingLeft>
               <Box
                 fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
                 mb={3}
@@ -175,7 +195,7 @@ const FeatureContent: React.FC<{}> = () => {
                 {t('HighStandardRebateProgram')}
               </Box>
               <Box textAlign="left">{t('ProvideHighStandardAgency')}</Box>
-            </Parallax>
+            </ParallaxSettingLeft>
           </Flex>
 
           <Flex
@@ -183,7 +203,7 @@ const FeatureContent: React.FC<{}> = () => {
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
             mt={{ base: 10, md: 0 }}
           >
-            <Parallax data={ParallaxSettingRight}>
+            <ParallaxSettingRight>
               <Box
                 fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
                 mb={3}
@@ -191,7 +211,7 @@ const FeatureContent: React.FC<{}> = () => {
                 {t('InstantRebatePayment')}
               </Box>
               <Box textAlign="left">{t('WCGMarketsFullyAutomated')}</Box>
-            </Parallax>
+            </ParallaxSettingRight>
           </Flex>
         </Flex>
       </Flex>
@@ -213,7 +233,7 @@ const FeatureContent: React.FC<{}> = () => {
           mt={{ base: '50px', md: 0 }}
           ml={{ base: 0, md: '100px' }}
         >
-          <Parallax data={ParallaxSettingLeft}>
+          <ParallaxSettingSlow>
             <Box
               fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
               mb={3}
@@ -221,7 +241,7 @@ const FeatureContent: React.FC<{}> = () => {
               {t('OneToOneLiveCustomerService')}
             </Box>
             <Box textAlign="left">{t('ProvidePartnersWith')}</Box>
-          </Parallax>
+          </ParallaxSettingSlow>
         </Flex>
       </Flex>
 
@@ -251,15 +271,13 @@ const FeatureContent: React.FC<{}> = () => {
             flexDir="column"
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
           >
-            <Parallax data={ParallaxSettingLeft}>
-              <Box
-                fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
-                mb={3}
-              >
-                {t('ExtraMarketing')}
-              </Box>
-              <Box textAlign="left">{t('ToTheQualifiedPartners')}</Box>
-            </Parallax>
+            <Box
+              fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+              mb={3}
+            >
+              {t('ExtraMarketing')}
+            </Box>
+            <Box textAlign="left">{t('ToTheQualifiedPartners')}</Box>
           </Flex>
 
           <Flex
@@ -267,15 +285,13 @@ const FeatureContent: React.FC<{}> = () => {
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
             mt={{ base: 10, md: 0 }}
           >
-            <Parallax data={ParallaxSettingRight}>
-              <Box
-                fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
-                mb={3}
-              >
-                {t('YearEndBonus')}
-              </Box>
-              <Box textAlign="left">{t('CommonProsperity')}</Box>
-            </Parallax>
+            <Box
+              fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+              mb={3}
+            >
+              {t('YearEndBonus')}
+            </Box>
+            <Box textAlign="left">{t('CommonProsperity')}</Box>
           </Flex>
         </Flex>
       </Flex>
@@ -298,7 +314,7 @@ const FeatureContent: React.FC<{}> = () => {
           mt={{ base: '50px', md: 0 }}
           mr={{ base: 0, md: '100px' }}
         >
-          <Parallax data={ParallaxSettingRight}>
+          <ParallaxSettingRotate>
             <Box
               fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
               mb={3}
@@ -306,7 +322,7 @@ const FeatureContent: React.FC<{}> = () => {
               {t('VPNSupport')}
             </Box>
             <Box textAlign="left">{t('ProvideASafeNetwork')}</Box>
-          </Parallax>
+          </ParallaxSettingRotate>
         </Flex>
       </Flex>
 
@@ -336,15 +352,13 @@ const FeatureContent: React.FC<{}> = () => {
             flexDir="column"
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
           >
-            <Parallax data={ParallaxSettingLeft}>
-              <Box
-                fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
-                mb={3}
-              >
-                {t('DecentDeposit')}
-              </Box>
-              <Box textAlign="left">{t('UnionPayOnline')}</Box>
-            </Parallax>
+            <Box
+              fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+              mb={3}
+            >
+              {t('DecentDeposit')}
+            </Box>
+            <Box textAlign="left">{t('UnionPayOnline')}</Box>
           </Flex>
 
           <Flex
@@ -352,15 +366,13 @@ const FeatureContent: React.FC<{}> = () => {
             width={{ base: '100%', md: isChinese ? '25%' : '35%' }}
             mt={{ base: 10, md: 0 }}
           >
-            <Parallax data={ParallaxSettingRight}>
-              <Box
-                fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
-                mb={3}
-              >
-                {t('MultiFacetedPromotional')}
-              </Box>
-              <Box textAlign="left">{t('ThePartnersOfWCGMarkets')}</Box>
-            </Parallax>
+            <Box
+              fontSize={{ base: '24px', md: isChinese ? '36px' : '26px' }}
+              mb={3}
+            >
+              {t('MultiFacetedPromotional')}
+            </Box>
+            <Box textAlign="left">{t('ThePartnersOfWCGMarkets')}</Box>
           </Flex>
         </Flex>
       </Flex>
