@@ -72,7 +72,7 @@ const contact: React.FC<{}> = () => {
             imageSrc="../assets/images/contact_email.png"
           />
           <ContactIcon
-            href={`tel:${links.tel}`}
+            href={links.skype}
             imageSrc="../assets/images/contact_tel.png"
           />
         </Flex>

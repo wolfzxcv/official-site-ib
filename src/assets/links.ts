@@ -1,7 +1,7 @@
 export const links = {
-  whatsApp: 'https://api.whatsapp.com/message/2CCAPQTYUPV6P1',
-  line: 'https://page.line.me/?accountId=739zqmre&openerPlatform=native&openerKey=talkroom%3Amessage',
-  telegram: 'https://t.me/WCGMarketsLtd',
+  whatsApp: 'https://wa.me/message/FTCZMMCFRFLAK1',
+  line: 'https://page.line.me/?accountId=956uiwyb&openerPlatform=native&openerKey=talkroom%3Amessage',
+  telegram: 'https://t.me/wcgpartners',
   facebook: 'https://www.facebook.com/WCG-109473260957040',
   instagram: 'https://www.instagram.com/wcg_markets',
   weibo: 'https://m.weibo.cn/u/7727884823',
@@ -21,7 +21,7 @@ export const links = {
   // 代理中心
   iBCenter: 'https://my.wcgmarkets.com/',
   // 聯絡信箱
-  email: 'partner@wcgmarkets.com',
+  email: 'partners@wcgmarkets.com',
   // 聯絡電話
-  tel: '4001203612'
+  skype: 'https://join.skype.com/xSquY0LYS0Pt'
 };
