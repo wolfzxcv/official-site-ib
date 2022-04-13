@@ -1,6 +1,6 @@
 import Wrapper from '@/components/Base/Wrapper';
 import InViewSlideFade from '@/components/Common/InViewSlideFade';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Link } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -48,6 +48,7 @@ const promotion: React.FC<{}> = () => {
             <PromotionEach
               imageSrc="../assets/images/promotion_03.png"
               text={t('UserCenterTutorial')}
+              href="../assets/crm.pdf"
             />
 
             <PromotionEach
@@ -61,9 +62,29 @@ const promotion: React.FC<{}> = () => {
   );
 };
 
-type PromotionEachProps = { imageSrc: string; text: string };
+type PromotionEachProps = { href?: string; imageSrc: string; text: string };
 
 const PromotionEach: React.FC<PromotionEachProps> = ({
+  href,
+  imageSrc,
+  text
+}: PromotionEachProps) => {
+  return href ? (
+    <Link
+      href={href}
+      _hover={{
+        textDecoration: 'none'
+      }}
+      download
+    >
+      <PromotionEachBase imageSrc={imageSrc} text={text} />
+    </Link>
+  ) : (
+    <PromotionEachBase imageSrc={imageSrc} text={text} />
+  );
+};
+
+const PromotionEachBase: React.FC<PromotionEachProps> = ({
   imageSrc,
   text
 }: PromotionEachProps) => {
