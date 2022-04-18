@@ -7,7 +7,7 @@ export const agent: Agent = {
   TheAgentIs:
     "The agent is the company's business partner, responsible for recommending customers to WCG, and gets the corresponding commission every day.",
   ReferringCustomersCanEnjoy:
-    'Referring customers can enjoy a rebate of up to $25/lot. In addition, you can log in to the exclusive agent background at any time to view relevant statistics.',
+    'Referring customers can enjoy a rebate higher than the industry average. In addition, you can log in to the exclusive agent background at any time to view relevant statistics.',
   CompanyBroker: 'Company Broker',
   BestChoiceFor:
     'Best Choice for Agency Agents - Offers Competitive Agency Rebates.',

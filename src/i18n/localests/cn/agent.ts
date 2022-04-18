@@ -6,7 +6,7 @@ export const agent: Agent = {
   TheAgentIs:
     '代理是公司的业务合作伙伴，负责推荐客户至 WCG，每天获得相应的佣金。',
   ReferringCustomersCanEnjoy:
-    '推荐客户即可享有最高$25/手的返佣。另外，您还可以随时登陆专属代理后台，查看相关的数据统计。',
+    '推荐客户即可享有高于市场标准的返佣。另外，您还可以随时登陆专属代理后台，查看相关的数据统计。',
   CompanyBroker: '公司代理',
   BestChoiceFor: '机构代理的最佳选择 - 提供到竞争力的代理返佣条件。',
   ProvideYouWith:
