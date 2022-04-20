@@ -56,24 +56,24 @@ const contact: React.FC<{}> = () => {
             imageSrc="../assets/images/contact_live_chat.png"
           />
           <ContactIcon
-            href={links.whatsApp}
-            imageSrc="../assets/images/contact_whatsapp.png"
+            href={links.skype}
+            imageSrc="../assets/images/contact_skype.png"
           />
           <ContactIcon
             href={links.line}
             imageSrc="../assets/images/contact_line.png"
           />
           <ContactIcon
-            href={links.telegram}
-            imageSrc="../assets/images/contact_telegram.png"
+            href={links.whatsApp}
+            imageSrc="../assets/images/contact_whatsapp.png"
           />
           <ContactIcon
             href={`mailto:${links.email}`}
             imageSrc="../assets/images/contact_email.png"
           />
           <ContactIcon
-            href={links.skype}
-            imageSrc="../assets/images/contact_tel.png"
+            href={links.telegram}
+            imageSrc="../assets/images/contact_telegram.png"
           />
         </Flex>
       </Flex>
