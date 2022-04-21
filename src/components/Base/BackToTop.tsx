@@ -5,7 +5,7 @@ import { BiArrowToTop } from 'react-icons/bi';
 
 const BackToTop: React.FC<{}> = () => {
   return (
-    <Box position="fixed" zIndex={1000} bottom="10px" right="10px">
+    <Box position="fixed" zIndex={1000} bottom="80px" right="10px">
       <IconButton
         onClick={scrollToTop}
         icon={<BiArrowToTop fontSize="40px" />}

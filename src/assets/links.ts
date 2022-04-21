@@ -23,5 +23,5 @@ export const links = {
   // 聯絡信箱
   email: 'partners@wcgmarkets.com',
   // 聯絡電話
-  skype: 'https://join.skype.com/xSquY0LYS0Pt'
+  skype: 'skype:live:.cid.d46fed2274750d84?chat'
 };
