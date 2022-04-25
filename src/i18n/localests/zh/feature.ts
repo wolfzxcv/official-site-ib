@@ -3,7 +3,7 @@ import { Feature } from '../@types/feature';
 export const feature: Feature = {
   BrokersRegulatedBy: '受正規機構監管的經紀商',
   WCGMarketsHolds: 'WCG MARKETS 持有聖文森的專業認可牌照並接受監管',
-  UnlimitedRebates: '每位客戶返傭無上限',
+  UnlimitedRebates: '每位客戶返佣無上限',
   WCGMarketsDoesNotSet:
     'WCG MARKETS 對於合作夥伴能從每位客戶身上賺到多少，並未設下任何限制。因此，如果合作夥伴的客戶繼續活躍地進行交易的話，那麽 IB 就可以從客戶的交易中持續獲利，而且沒有上限。',
   ManagementToolsProvided: '提供管理工具',
@@ -12,11 +12,11 @@ export const feature: Feature = {
   FinancialSecurity: '資金安全',
   WCGMarketsIsCommitted:
     'WCG MARKETS 致力為合作夥伴和客戶提供安全，迅速，高效，穩定的支付平台，確保資金保障・而 WCG 多個牌照以及多個監管註冊都將加強二者的保障性。',
-  HighStandardRebateProgram: '高標準的返傭計劃',
-  ProvideHighStandardAgency: '提供行業高標準代理返傭，非常具競爭力的返傭制度',
-  InstantRebatePayment: '即時返傭支付',
+  HighStandardRebateProgram: '高標準的返佣計劃',
+  ProvideHighStandardAgency: '提供行業高標準代理返佣，非常具競爭力的返佣制度',
+  InstantRebatePayment: '即時返佣支付',
   WCGMarketsFullyAutomated:
-    'WCG MARKETS 全自動化返傭系統保障 IB 代理的傭金將獲得按時支付，不會有任何隱藏的費用或收費。',
+    'WCG MARKETS 全自動化返佣系統保障 IB 代理的佣金將獲得按時支付，不會有任何隱藏的費用或收費。',
   OneToOneLiveCustomerService: '一對一真人客戶服務',
   ProvidePartnersWith:
     '為合作夥伴提供每週五天，每天二十四小時的多語言即時支援。特別指派的客戶經理將給予合作夥伴適當指導，幫助合作夥伴。',

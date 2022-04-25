@@ -2,13 +2,13 @@ import { Agent } from '../@types/agent';
 
 export const agent: Agent = {
   IndividualBroker: '個人代理',
-  BecomeOurBrokerRightNow: '馬上成為我們的代理，即可獲得高於行業標準的返傭。',
+  BecomeOurBrokerRightNow: '馬上成為我們的代理，即可獲得高於行業標準的返佣。',
   TheAgentIs:
-    '代理是公司的業務合作夥伴，負責推薦客戶至 WCG，每天獲得相應的傭金。',
+    '代理是公司的業務合作夥伴，負責推薦客戶至 WCG，每天獲得相應的佣金。',
   ReferringCustomersCanEnjoy:
-    '推薦客戶即可享有高於市場標準的返傭。另外，您還可以隨時登入專屬代理後台，查看相關的數據統計。',
+    '推薦客戶即可享有高於市場標準的返佣。另外，您還可以隨時登入專屬代理後台，查看相關的數據統計。',
   CompanyBroker: '公司代理',
-  BestChoiceFor: '機構代理的最佳選擇 - 提供到競爭力的代理返傭條件。',
+  BestChoiceFor: '機構代理的最佳選擇 - 提供到競爭力的代理返佣條件。',
   ProvideYouWith:
     '為您多方位市場支持，量身定制專屬活動，營銷策略，營運 IB 贊助獎勵。',
   ProvideSpecialCustomizedAdvertisements:

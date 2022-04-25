@@ -2,13 +2,13 @@ import { Common } from '../@types/common';
 
 export const common: Common = {
   up: '起',
-  noLimit: '無上限傭金',
+  noLimit: '無上限佣金',
   fee: '出入金手續費',
   hour: '小時',
   liveChat: '客服在線時間',
   safe: '資金安全',
   instant: '即時',
-  withdrawal: '傭金提取時間',
+  withdrawal: '佣金提取時間',
   startNow: '立即開始',
   products: '交易產品',
   forex: '外匯',
@@ -53,9 +53,9 @@ export const common: Common = {
   mediaAwards8:
     '非常重視客戶的交易體驗，WCG 的團隊會為您隨時提供一對一的客戶服務，讓您享有全球最好的交易環境。',
   mediaAwards9: '實力再被確認獲專業認可的貿易場 GTP Certified 徽章。',
-  InstantRebatePayment: '即時返傭支付',
+  InstantRebatePayment: '即時返佣支付',
   WCGMarketsFullyAutomated:
-    'WCG MARKETS 全自動化返傭系統保障 IB 代理的傭金將獲得按時支付，不會有任何隱藏的費用或收費。',
+    'WCG MARKETS 全自動化返佣系統保障 IB 代理的佣金將獲得按時支付，不會有任何隱藏的費用或收費。',
   DownloadApp: '下載應用程序',
   OneToOneLiveCustomerService: '一對一真人客戶服務',
   ProvidePartnersWith:
