@@ -41,7 +41,8 @@ const promotion: React.FC<{}> = () => {
             />
             <PromotionEach
               imageSrc="../assets/images/promotion_02.png"
-              text={t('SwapCalculator')}
+              text={t('ProductList')}
+              href="../assets/images/WCGCPJY.jpg"
             />
           </Flex>
           <Flex>
@@ -62,7 +63,11 @@ const promotion: React.FC<{}> = () => {
   );
 };
 
-type PromotionEachProps = { href?: string; imageSrc: string; text: string };
+type PromotionEachProps = {
+  href?: string;
+  imageSrc: string;
+  text: string;
+};
 
 const PromotionEach: React.FC<PromotionEachProps> = ({
   href,
@@ -75,7 +80,7 @@ const PromotionEach: React.FC<PromotionEachProps> = ({
       _hover={{
         textDecoration: 'none'
       }}
-      download
+      target="_blank"
     >
       <PromotionEachBase imageSrc={imageSrc} text={text} />
     </Link>

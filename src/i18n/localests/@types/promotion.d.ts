@@ -6,8 +6,8 @@ export type Promotion = {
   WCGMarketsPromotionTool: string;
   /** VPN Application */
   VPNApplication: string;
-  /** Swap Calculator */
-  SwapCalculator: string;
+  /** Product List */
+  ProductList: string;
   /** User Center Tutorial */
   UserCenterTutorial: string;
   /** Web Poster */
