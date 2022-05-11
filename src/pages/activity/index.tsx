@@ -28,10 +28,22 @@ const activity: React.FC<{}> = () => {
           <Box fontSize={{ base: '24px', md: '36px' }}>{t('Promotions')}</Box>
           <Flex wrap="wrap" px={5} justify="center">
             <ActivityEach
+              imageSrc="../assets/images/activity_07.jpg"
+              summary={t('GoldEvents')}
+              href="https://glb.012wenchuan.com/activity/WCG15"
+              isFinished={false}
+            />
+
+            <ActivityEach
+              imageSrc="../assets/images/activity_06.jpg"
+              summary={t('RebateOnFirstTimeTopUp')}
+              href="https://glb.012wenchuan.com/activity/WCG51"
+              isFinished={false}
+            />
+
+            <ActivityEach
               imageSrc="../assets/images/activity_05.jpg"
               summary={t('ANoteOnWeiboForBonus')}
-              href="https://glb.012wenchuan.com"
-              isFinished={false}
             />
 
             <ActivityEach
@@ -93,7 +105,7 @@ const ActivityEach: React.FC<ActivityEachProps> = ({
           isExternal
         >
           <Box>
-            <Image src={imageSrc} alt={summary} />
+            <Image border="1px" src={imageSrc} alt={summary} />
           </Box>
         </Link>
         <Box width="100%" textAlign="center" my={5}>

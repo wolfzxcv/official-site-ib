@@ -7,5 +7,7 @@ export const activity: Activity = {
   TradingGiftsTripleBonus: 'Trading Gifts Triple Bonus',
   ANoteOnWeiboForBonus: 'A Note On Weibo For Bonus',
   Finished: 'Finished',
-  ShareNow: 'Share Now'
+  ShareNow: 'Share Now',
+  RebateOnFirstTimeTopUp: '15% Rebate On First Time Top-Up',
+  GoldEvents: 'May 1st Gold Events'
 };

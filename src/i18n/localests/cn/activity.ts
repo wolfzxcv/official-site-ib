@@ -7,5 +7,7 @@ export const activity: Activity = {
   TradingGiftsTripleBonus: '交易送礼三重奖',
   ANoteOnWeiboForBonus: '关注微博赠红包',
   Finished: '己完结',
-  ShareNow: '立即分享'
+  ShareNow: '立即分享',
+  RebateOnFirstTimeTopUp: '首充 15% 回赠',
+  GoldEvents: '51 黄金活动'
 };

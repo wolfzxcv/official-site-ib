@@ -16,4 +16,8 @@ export type Activity = {
   Finished: string;
   /** Share Now */
   ShareNow: string;
+  /** Rebate On First Time Top-Up */
+  RebateOnFirstTimeTopUp: string;
+  /** Gold Events */
+  GoldEvents: string;
 };
