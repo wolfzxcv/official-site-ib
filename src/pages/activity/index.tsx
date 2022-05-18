@@ -29,14 +29,14 @@ const activity: React.FC<{}> = () => {
           <Flex wrap="wrap" px={5} justify="center">
             <ActivityEach
               imageSrc="../assets/images/activity_07.jpg"
-              summary={t('GoldEvents')}
+              summary={t('RebateOnFirstTimeTopUp')}
               href="https://glb.012wenchuan.com/activity/WCG15"
               isFinished={false}
             />
 
             <ActivityEach
               imageSrc="../assets/images/activity_06.jpg"
-              summary={t('RebateOnFirstTimeTopUp')}
+              summary={t('GoldEvents')}
               href="https://glb.012wenchuan.com/activity/WCG51"
               isFinished={false}
             />
