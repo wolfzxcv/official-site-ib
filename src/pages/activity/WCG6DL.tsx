@@ -1,7 +1,7 @@
 import { links } from '@/assets/links';
 import HTMLHead from '@/components/Base/HTMLHead';
 import LiveChat from '@/components/Base/LiveChat';
-import { isIOS, openChatWindow } from '@/utils';
+import { openChatWindow } from '@/utils';
 import { Box, Flex, Image, Link } from '@chakra-ui/react';
 import React from 'react';
 
@@ -80,19 +80,19 @@ const WCG6DL: React.FC<{}> = () => {
       {/* Mobile layout less than 831px */}
       <Flex
         display={{ base: 'flex', md: 'none' }}
-        height="92vh"
+        minH="710px"
+        bg="#34c0e1"
         backgroundImage="url('../assets/images/activity_WCG6DL_M.jpg')"
         bgPosition="top center"
         bgSize="cover"
         flexDir="column"
         align="center"
-        overflow="hidden"
       >
-        <Box mt={isIOS() ? '225px' : '200px'} width="300px" color="white">
+        <Box mt="210px" width="300px" color="white">
           <WCG6DLSummary />
         </Box>
 
-        <Flex pt="15px" pb="10px" justify="center">
+        <Flex pt="20px" pb="10px" justify="center">
           <Link href="/" isExternal width="30%">
             <Image
               src="../assets/images/activity_WCG6DL_b1.png"

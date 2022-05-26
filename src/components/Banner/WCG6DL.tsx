@@ -1,6 +1,5 @@
 import { Locales } from '@/i18n/config';
 import { WCG6DLContent, WCG6DLSummary } from '@/pages/activity/WCG6DL';
-import { isIOS } from '@/utils';
 import { Box, Flex } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -28,7 +27,7 @@ const WCG6DL: React.FC<{}> = () => {
         align="center"
       >
         <Box
-          mt={isIOS() ? '180px' : '200px'}
+          mt="185px"
           width="300px"
           color="white"
           display={{ base: 'block', md: 'none' }}
@@ -37,7 +36,7 @@ const WCG6DL: React.FC<{}> = () => {
         </Box>
 
         <Box
-          mt={7}
+          mt={10}
           px={1}
           width="90vw"
           fontSize="8px"
