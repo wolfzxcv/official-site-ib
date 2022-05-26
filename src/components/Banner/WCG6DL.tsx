@@ -38,8 +38,10 @@ const WCG6DL: React.FC<{}> = () => {
 
         <Box
           mt={7}
-          width="300px"
-          fontSize="10px"
+          px={1}
+          width="90vw"
+          fontSize="8px"
+          bg="white"
           display={{ base: 'block', md: 'none' }}
         >
           <WCG6DLContent />
