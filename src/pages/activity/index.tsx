@@ -28,6 +28,14 @@ const activity: React.FC<{}> = () => {
           <Box fontSize={{ base: '24px', md: '36px' }}>{t('Promotions')}</Box>
           <Flex wrap="wrap" px={5} justify="center">
             <ActivityEach
+              imageSrc="../assets/images/activity_08.jpg"
+              summary={t('SuperSummer')}
+              href="/activity/WCG6DL"
+              isFinished={false}
+              isExternal={false}
+            />
+
+            <ActivityEach
               imageSrc="../assets/images/activity_07.jpg"
               summary={t('RebateOnFirstTimeTopUp')}
               href="https://glb.012wenchuan.com/activity/WCG15"
@@ -38,7 +46,6 @@ const activity: React.FC<{}> = () => {
               imageSrc="../assets/images/activity_06.jpg"
               summary={t('GoldEvents')}
               href="https://glb.012wenchuan.com/activity/WCG51"
-              isFinished={false}
             />
 
             <ActivityEach
@@ -79,13 +86,15 @@ type ActivityEachProps = {
   summary: string;
   href?: IBButtonProps['href'];
   isFinished?: boolean;
+  isExternal?: boolean;
 };
 
 const ActivityEach: React.FC<ActivityEachProps> = ({
   imageSrc,
   summary,
   href,
-  isFinished = true
+  isFinished = true,
+  isExternal = true
 }: ActivityEachProps) => {
   const { t } = useTranslation('activity');
 
@@ -102,7 +111,7 @@ const ActivityEach: React.FC<ActivityEachProps> = ({
             transition: '1s'
           }}
           href={href}
-          isExternal
+          isExternal={isExternal}
         >
           <Box>
             <Image border="1px" src={imageSrc} alt={summary} />

@@ -20,4 +20,6 @@ export type Activity = {
   RebateOnFirstTimeTopUp: string;
   /** Gold Events */
   GoldEvents: string;
+  /** Super Summer */
+  SuperSummer: string;
 };

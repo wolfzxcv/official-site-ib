@@ -9,5 +9,6 @@ export const activity: Activity = {
   Finished: '己完結',
   ShareNow: '立即分享',
   RebateOnFirstTimeTopUp: '首充 15% 回贈',
-  GoldEvents: '51 黃金活動'
+  GoldEvents: '51 黃金活動',
+  SuperSummer: '夏天解放 666'
 };

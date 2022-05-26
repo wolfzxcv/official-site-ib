@@ -9,5 +9,6 @@ export const activity: Activity = {
   Finished: 'Finished',
   ShareNow: 'Share Now',
   RebateOnFirstTimeTopUp: '15% Rebate On First Time Top-Up',
-  GoldEvents: 'May 1st Gold Events'
+  GoldEvents: 'May 1st Gold Events',
+  SuperSummer: 'Super Summer'
 };
