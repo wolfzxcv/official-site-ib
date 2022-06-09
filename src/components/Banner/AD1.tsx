@@ -58,7 +58,7 @@ const AD1: React.FC<{}> = () => {
               </Link>
             </Box>
 
-            <Box>
+            <Box mr={5}>
               <Link
                 _hover={{
                   opacity: 0.5,
@@ -74,6 +74,26 @@ const AD1: React.FC<{}> = () => {
                   height="42px"
                   src="../assets/images/banner_apple_store.jpg"
                   alt="Apple Store"
+                />
+              </Link>
+            </Box>
+
+            <Box>
+              <Link
+                _hover={{
+                  opacity: 0.5,
+                  transition: '1s',
+                  borderRadius: '10px'
+                }}
+                mx={1}
+                href={links.mt4Huawei}
+                isExternal
+              >
+                <Image
+                  width="142px"
+                  height="42px"
+                  src="../assets/images/banner_app_gallery.jpg"
+                  alt="App Gallery"
                 />
               </Link>
             </Box>

@@ -69,8 +69,8 @@ const MobileHeader: React.FC<{}> = () => {
           <Link href={links.mt4Huawei} isExternal mr={2}>
             <Image
               width="72px"
-              src="../assets/images/banner_google_play.jpg"
-              alt="Google Play"
+              src="../assets/images/banner_app_gallery.jpg"
+              alt="App Gallery"
             />
           </Link>
         ) : isUsingMobile() ? (
