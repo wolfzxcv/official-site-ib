@@ -1,4 +1,3 @@
-import { links } from '@/assets/links';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
@@ -34,7 +33,7 @@ const AD5: React.FC<{}> = () => {
           </Box>
 
           <IBButton
-            href={links.registerReal}
+            href={process.env.NEXT_PUBLIC_REGISTER_REAL}
             text={t('OpenRealAccount')}
             width={{ base: '50vw', md: '200px' }}
             bg="#b81c22"

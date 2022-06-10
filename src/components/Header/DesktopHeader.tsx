@@ -53,7 +53,7 @@ const DesktopHeader: React.FC<{}> = () => {
 
           <ClickLink
             text={t('login')}
-            href={links.usersCenter}
+            href={process.env.NEXT_PUBLIC_USERS_CENTER}
             imageSrc="../assets/images/login.png"
           />
 
