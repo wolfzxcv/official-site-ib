@@ -1,6 +1,6 @@
 # WCG Markets IB website
 
-- [正式環境](http://18.163.183.177/)
+- [正式環境](https://www.wcgpartner.com/)
 - [測試環境](http://18.163.183.177/)
 
 ## 運行方式
@@ -89,7 +89,7 @@
 請先安裝 **[Node](https://nodejs.org/en/download/)**
 
 - [Next.js](https://nextjs.org/)
-- TypeScript
+- [TypeScript](https://www.typescriptlang.org/)
 - [Chakra UI](https://chakra-ui.com/)
 - [next-i18next](https://github.com/isaachinman/next-i18next)
 - [commitizen](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly)
@@ -103,3 +103,19 @@
 
 這樣佈署後,可以在 head 標籤裡面,看到版本.
 ![](https://i.imgur.com/m5vho4w.jpg)
+
+## 情報
+
+### 活動頁面
+
+- 路徑命名為 activity/活動名稱
+
+  - 新增檔案在 src\pages\activity 底下
+  - 新增圖片在 public\assets\images 底下, 圖片命名方式為 activity*活動名稱*圖片名稱
+  - 用以上方式命名, 將來若想刪除已經過時的活動相關頁面及檔案, 維護會較容易
+
+- 目前活動頁面們(依照開發順序陳列)
+
+  - [WCG6DL](https://www.wcgpartner.com/activity/WCG6DL)
+
+- 新活動改放在首頁 banner
