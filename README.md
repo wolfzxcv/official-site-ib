@@ -104,7 +104,14 @@
 這樣佈署後,可以在 head 標籤裡面,看到版本.
 ![](https://i.imgur.com/m5vho4w.jpg)
 
-## 情報
+### 環境變數
+
+- NEXT_PUBLIC_REGISTER_REAL
+  - 開立真實帳戶
+- NEXT_PUBLIC_USERS_CENTER
+  - 客戶中心
+- NEXT_PUBLIC_USERS_CENTER_ZH
+  - 客戶中心(中文)
 
 ### 活動頁面
 
