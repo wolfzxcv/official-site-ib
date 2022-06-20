@@ -14,6 +14,7 @@ const promotion: React.FC<{}> = () => {
       <Flex
         minH="700px"
         bgImage="../assets/images/promotion_banner.jpg"
+        bgColor="#e4572a"
         bgRepeat="no-repeat"
         bgPosition="center top"
         justify="center"
@@ -51,10 +52,16 @@ const promotion: React.FC<{}> = () => {
               text={t('UserCenterTutorial')}
               href="../assets/crm.pdf"
             />
-
             <PromotionEach
               imageSrc="../assets/images/promotion_04.png"
-              text={t('WebPoster')}
+              text={t('Plan')}
+            />
+          </Flex>
+          <Flex>
+            <PromotionEach
+              imageSrc="../assets/images/promotion_05.png"
+              text={t('CompanyProfile')}
+              href="../assets/video.mp4"
             />
           </Flex>
         </Flex>

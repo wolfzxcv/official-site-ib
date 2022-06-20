@@ -11,6 +11,7 @@ import HorizontalStrip from '@/components/Home/HorizontalStrip';
 import MediaAwards from '@/components/Home/MediaAwards';
 import Products from '@/components/Home/Products';
 import RedBlock from '@/components/Home/RedBlock';
+import IntroductionVideo from '@/components/PopUp/IntroductionVideo';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -27,6 +28,8 @@ const Index: React.FC<{}> = () => {
 
   return (
     <Wrapper>
+      <IntroductionVideo />
+
       {/* Carousel */}
       <Carousel defaultSlider={<AD1 key="AD1" />} sliders={sliders} />
 

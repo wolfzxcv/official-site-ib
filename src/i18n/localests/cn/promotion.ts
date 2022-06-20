@@ -5,5 +5,6 @@ export const promotion: Promotion = {
   VPNApplication: 'VPN 申请',
   ProductList: '产品列表',
   UserCenterTutorial: '用户中心教学',
-  WebPoster: '网络海报'
+  Plan: '计划书',
+  CompanyProfile: '公司简介'
 };

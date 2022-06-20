@@ -10,6 +10,8 @@ export type Promotion = {
   ProductList: string;
   /** User Center Tutorial */
   UserCenterTutorial: string;
-  /** Web Poster */
-  WebPoster: string;
+  /** Plan */
+  Plan: string;
+  /** Company Profile */
+  CompanyProfile: string;
 };

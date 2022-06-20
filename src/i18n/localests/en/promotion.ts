@@ -5,5 +5,6 @@ export const promotion: Promotion = {
   VPNApplication: 'VPN Application',
   ProductList: 'Product List',
   UserCenterTutorial: 'User Center Tutorial',
-  WebPoster: 'Web Poster'
+  Plan: 'Plan',
+  CompanyProfile: 'Company Profile'
 };
