@@ -1,13 +1,22 @@
 import Wrapper from '@/components/Base/Wrapper';
 import InViewSlideFade from '@/components/Common/InViewSlideFade';
+import { Locales } from '@/i18n/config';
 import { Box, Flex, Link } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const promotion: React.FC<{}> = () => {
   const { t } = useTranslation('promotion');
+
+  const router = useRouter();
+  const currentLang = router.locale as Locales;
+
+  const isChinese = currentLang === 'cn' || currentLang === 'zh';
+
+  const WCG_PDF_LANG = isChinese ? 'cn' : 'en';
 
   return (
     <Wrapper>
@@ -55,6 +64,7 @@ const promotion: React.FC<{}> = () => {
             <PromotionEach
               imageSrc="../assets/images/promotion_04.png"
               text={t('Plan')}
+              href={`../assets/2022WCG_${WCG_PDF_LANG}.pdf`}
             />
           </Flex>
           <Flex>
