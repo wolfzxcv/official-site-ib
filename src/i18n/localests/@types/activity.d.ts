@@ -22,4 +22,8 @@ export type Activity = {
   GoldEvents: string;
   /** Super Summer */
   SuperSummer: string;
+  /** July Top-Up */
+  JulyTopUp: string;
+  /** Super Agent Bonus */
+  SuperAgentBonus: string;
 };

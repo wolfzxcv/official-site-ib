@@ -10,5 +10,7 @@ export const activity: Activity = {
   ShareNow: 'Share Now',
   RebateOnFirstTimeTopUp: '15% Rebate On First Time Top-Up',
   GoldEvents: 'May 1st Gold Events',
-  SuperSummer: 'Super Summer'
+  SuperSummer: 'Super Summer',
+  JulyTopUp: 'July full value bonus rebate',
+  SuperAgentBonus: 'Summer Agent Bonus Overtime Rebate'
 };

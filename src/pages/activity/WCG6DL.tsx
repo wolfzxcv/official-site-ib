@@ -164,7 +164,7 @@ export const WCG6DLContent: React.FC<WCG6DLContentProps> = ({
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />
-      獎金于活动结束14天内发放
+      奖金于活动结束14天内发放
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />
@@ -172,16 +172,16 @@ export const WCG6DLContent: React.FC<WCG6DLContentProps> = ({
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />
-      公司保留随时修改、暂停、终止本活动计划及任何相關规则條款之權利及其解释权，毋须事前通知客户
+      公司保留随时修改、暂停、终止本活动计划及任何相关规则条款之权利及其解释权，毋须事前通知客户
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />
       若客户通过超短线刷单持仓低于5分钟的订单不计入本次活动的手数，AB仓交易或者不正规交易套取赠金，
-      WCG有权停止客户交易，取消活动资格井按照WCG交易细则中異常交易的处理方法进行处理
+      WCG有权停止客户交易，取消活动资格并按照WCG交易细则中異常交易的处理方法进行处理
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />
-      贵金屬，原油交易手数定义：黄金1标准手100盎司，白銀一标准手2500盎司，原油1标准手1000桶
+      贵金属，原油交易手数定义：黄金1标准手100盎司，白银一标准手2500盎司，原油1标准手1000桶
     </Box>
     <Box>
       <WCG6DLContentSign isDesktop={isDesktop} />

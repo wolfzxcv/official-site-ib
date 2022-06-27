@@ -10,5 +10,7 @@ export const activity: Activity = {
   ShareNow: '立即分享',
   RebateOnFirstTimeTopUp: '首充 15% 回贈',
   GoldEvents: '51 黃金活動',
-  SuperSummer: '夏天解放 666'
+  SuperSummer: '夏天解放 666',
+  JulyTopUp: '7月儲值爆滿福利回贈',
+  SuperAgentBonus: '夏季代理福利加時回贈'
 };
