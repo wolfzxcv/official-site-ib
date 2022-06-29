@@ -30,14 +30,16 @@ const activity: React.FC<{}> = () => {
             <ActivityEach
               imageSrc="../assets/images/activity_10.jpg"
               summary={t('SuperAgentBonus')}
-              href="https://glb.012wenchuan.com/activity/WCGDLJS"
+              href="/activity/WCGDLJS"
+              isExternal={false}
               isFinished={false}
             />
 
             <ActivityEach
               imageSrc="../assets/images/activity_09.jpg"
               summary={t('JulyTopUp')}
-              href="https://glb.012wenchuan.com/activity/WCGQYHK"
+              href="/activity/WCGQYHK"
+              isExternal={false}
               isFinished={false}
             />
             <ActivityEach

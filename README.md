@@ -124,5 +124,7 @@
 - 目前活動頁面們(依照開發順序陳列)
 
   - [WCG6DL](https://www.wcgpartner.com/activity/WCG6DL)
+  - [WCGDLJS](https://www.wcgpartner.com/activity/WCGDLJS)
+  - [WCGQYHK](https://www.wcgpartner.com/activity/WCGQYHK)
 
 - 新活動改放在首頁 banner
