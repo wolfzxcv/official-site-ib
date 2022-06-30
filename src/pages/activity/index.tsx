@@ -53,7 +53,6 @@ const activity: React.FC<{}> = () => {
               imageSrc="../assets/images/activity_07.jpg"
               summary={t('RebateOnFirstTimeTopUp')}
               href="https://glb.012wenchuan.com/activity/WCG15"
-              isFinished={false}
             />
 
             <ActivityEach
