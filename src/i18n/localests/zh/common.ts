@@ -2,7 +2,7 @@ import { Common } from '../@types/common';
 
 export const common: Common = {
   up: '起',
-  noLimit: '無上限佣金',
+  noLimit: '無上限回贈',
   fee: '出入金手續費',
   hour: '小時',
   liveChat: '客服在線時間',
