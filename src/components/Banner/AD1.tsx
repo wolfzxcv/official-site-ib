@@ -86,7 +86,7 @@ const AD1: React.FC<{}> = () => {
                   borderRadius: '10px'
                 }}
                 mx={1}
-                href={links.mt4HuaweiApk}
+                href={process.env.NEXT_PUBLIC_MT4_APK}
                 isExternal
               >
                 <Image

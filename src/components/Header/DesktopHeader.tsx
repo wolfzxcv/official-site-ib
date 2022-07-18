@@ -33,7 +33,7 @@ const DesktopHeader: React.FC<{}> = () => {
           />
 
           <DownloadLink
-            href={links.mt4APP}
+            href={process.env.NEXT_PUBLIC_MT4_APP}
             imageSrc="../assets/images/web_trader.png"
             text="Web Trader"
           />

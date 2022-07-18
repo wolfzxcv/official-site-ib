@@ -14,16 +14,6 @@ export const links = {
     'https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk?utm_source=www.metatrader4.com&utm_campaign=install.metaquotes',
   mt4APP:
     'https://download.mql5.com/cdn/web/17749/mt4/wenchuangloballtd4setup.exe',
-  // 真實帳戶
-  registerReal: 'https://my.wcgmarkets.com/register',
-  // 模擬帳戶
-  registerDemo: 'https://trader.wc012.com/registerMock',
-  // 客戶中心
-  usersCenter: 'https://my.wcgmarkets.com/login',
-  // 客戶中心(中文)
-  usersCenterZh: 'https://my.wcgmarkets.com/zh/login',
-  // 代理中心
-  iBCenter: 'https://my.wcgmarkets.com/',
   // 聯絡信箱
   email: 'partners@wcgmarkets.com',
   // 聯絡電話

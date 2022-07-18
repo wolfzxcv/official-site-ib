@@ -66,7 +66,7 @@ const MobileHeader: React.FC<{}> = () => {
             />
           </Link>
         ) : isHuawei() ? (
-          <Link href={links.mt4HuaweiApk} isExternal mr={2}>
+          <Link href={process.env.NEXT_PUBLIC_MT4_APK} isExternal mr={2}>
             <Image
               width="72px"
               src="../assets/images/banner_app_gallery.jpg"

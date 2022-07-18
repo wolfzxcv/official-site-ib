@@ -112,6 +112,10 @@
   - 客戶中心
 - NEXT_PUBLIC_USERS_CENTER_ZH
   - 客戶中心(中文)
+- NEXT_PUBLIC_MT4_APP
+  - MT4 電腦版下載
+- NEXT_PUBLIC_MT4_APK
+  - MT4 APP(華為)下載
 
 ### 活動頁面
 
