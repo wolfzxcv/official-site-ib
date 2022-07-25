@@ -52,13 +52,13 @@ const activity: React.FC<{}> = () => {
             <ActivityEach
               imageSrc="../assets/images/activity_07.jpg"
               summary={t('RebateOnFirstTimeTopUp')}
-              href="https://glb.012wenchuan.com/activity/WCG15"
+              href="https://www.wcgmarkets.com/activity/WCG15"
             />
 
             <ActivityEach
               imageSrc="../assets/images/activity_06.jpg"
               summary={t('GoldEvents')}
-              href="https://glb.012wenchuan.com/activity/WCG51"
+              href="https://www.wcgmarkets.com/activity/WCG51"
             />
 
             <ActivityEach
@@ -69,13 +69,13 @@ const activity: React.FC<{}> = () => {
             <ActivityEach
               imageSrc="../assets/images/activity_04.jpg"
               summary={t('TradingGiftsTripleBonus')}
-              href="https://glb.012wenchuan.com/activity/WCGI"
+              href="https://www.wcgmarkets.com/activity/WCGI"
             />
 
             <ActivityEach
               imageSrc="../assets/images/activity_03.jpg"
               summary={t('TradingGiftsTripleBonus')}
-              href="https://glb.012wenchuan.com/activity/JYSL"
+              href="https://www.wcgmarkets.com/activity/JYSL"
             />
 
             <ActivityEach
