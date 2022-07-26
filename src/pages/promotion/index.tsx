@@ -18,6 +18,8 @@ const promotion: React.FC<{}> = () => {
 
   const WCG_PDF_LANG = isChinese ? 'cn' : 'en';
 
+  const WCG_VIDEO_LANG = isChinese ? 'video' : 'video_en';
+
   return (
     <Wrapper>
       <Flex
@@ -71,7 +73,7 @@ const promotion: React.FC<{}> = () => {
             <PromotionEach
               imageSrc="../assets/images/promotion_05.png"
               text={t('CompanyProfile')}
-              href="../assets/video.mp4"
+              href={`../assets/${WCG_VIDEO_LANG}.mp4`}
             />
           </Flex>
         </Flex>
