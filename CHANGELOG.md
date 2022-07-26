@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/wolfzxcv/official-site-ib/compare/v1.4.23...v1.5.0) (2022-07-26)
+
+
+### Features
+
+* **introductionvideo:** add English video ([f433601](https://github.com/wolfzxcv/official-site-ib/commit/f433601d3d9e0b93c5c2e07bdef15f126b991707))
+
 ### [1.4.23](https://github.com/wolfzxcv/official-site-ib/compare/v1.4.22...v1.4.23) (2022-07-18)
 
 ### [1.4.22](https://github.com/wolfzxcv/official-site-ib/compare/v1.4.21...v1.4.22) (2022-07-15)
