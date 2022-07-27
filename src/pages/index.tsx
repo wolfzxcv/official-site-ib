@@ -1,7 +1,6 @@
 import AD1 from '@/components/Banner/AD1';
 import AD2 from '@/components/Banner/AD2';
 import AD3 from '@/components/Banner/AD3';
-import AD4 from '@/components/Banner/AD4';
 import AD5 from '@/components/Banner/AD5';
 import AD6 from '@/components/Banner/AD6';
 import WCGDLJS from '@/components/Banner/WCGDLJS';
@@ -23,7 +22,6 @@ const Index: React.FC<{}> = () => {
     <AD1 key="AD1" />,
     <AD2 key="AD2" />,
     <AD3 key="AD3" />,
-    <AD4 key="AD4" />,
     <AD5 key="AD5" />,
     <AD6 key="AD6" />
   ];
