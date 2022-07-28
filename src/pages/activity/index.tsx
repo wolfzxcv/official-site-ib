@@ -32,7 +32,6 @@ const activity: React.FC<{}> = () => {
               summary={t('SuperAgentBonus')}
               href="/activity/WCGDLJS"
               isExternal={false}
-              isFinished={false}
             />
 
             <ActivityEach
@@ -40,7 +39,6 @@ const activity: React.FC<{}> = () => {
               summary={t('JulyTopUp')}
               href="/activity/WCGQYHK"
               isExternal={false}
-              isFinished={false}
             />
             <ActivityEach
               imageSrc="../assets/images/activity_08.jpg"
