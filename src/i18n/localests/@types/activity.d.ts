@@ -26,4 +26,6 @@ export type Activity = {
   JulyTopUp: string;
   /** Super Agent Bonus */
   SuperAgentBonus: string;
+  /** August Top-Up */
+  AugustTopUp: string;
 };

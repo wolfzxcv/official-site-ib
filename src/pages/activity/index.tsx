@@ -28,6 +28,14 @@ const activity: React.FC<{}> = () => {
           <Box fontSize={{ base: '24px', md: '36px' }}>{t('Promotions')}</Box>
           <Flex wrap="wrap" px={5} justify="center">
             <ActivityEach
+              imageSrc="../assets/images/activity_11.jpg"
+              summary={t('AugustTopUp')}
+              href="/activity/WCGBY"
+              isExternal={false}
+              isFinished={false}
+            />
+
+            <ActivityEach
               imageSrc="../assets/images/activity_10.jpg"
               summary={t('SuperAgentBonus')}
               href="/activity/WCGDLJS"

@@ -130,5 +130,6 @@
   - [WCG6DL](https://www.wcgpartner.com/activity/WCG6DL)
   - [WCGDLJS](https://www.wcgpartner.com/activity/WCGDLJS)
   - [WCGQYHK](https://www.wcgpartner.com/activity/WCGQYHK)
+  - [WCGBY](https://www.wcgpartner.com/activity/WCGBY)
 
 - 新活動改放在首頁 banner

@@ -12,5 +12,6 @@ export const activity: Activity = {
   GoldEvents: '51 黄金活动',
   SuperSummer: '夏天解放 666',
   JulyTopUp: '7月储值爆满福利回赠',
-  SuperAgentBonus: '夏季代理福利加时回赠'
+  SuperAgentBonus: '夏季代理福利加时回赠',
+  AugustTopUp: '8月首充赠红包'
 };

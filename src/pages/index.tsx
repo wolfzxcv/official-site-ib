@@ -3,6 +3,7 @@ import AD2 from '@/components/Banner/AD2';
 import AD3 from '@/components/Banner/AD3';
 import AD5 from '@/components/Banner/AD5';
 import AD6 from '@/components/Banner/AD6';
+import WCGBY from '@/components/Banner/WCGBY';
 import Wrapper from '@/components/Base/Wrapper';
 import Carousel from '@/components/Carousel/Carousel';
 import HorizontalStrip from '@/components/Home/HorizontalStrip';
@@ -15,6 +16,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Index: React.FC<{}> = () => {
   const sliders = [
+    <WCGBY key="WCGBY" />,
     <AD1 key="AD1" />,
     <AD2 key="AD2" />,
     <AD3 key="AD3" />,

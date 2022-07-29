@@ -12,5 +12,6 @@ export const activity: Activity = {
   GoldEvents: 'May 1st Gold Events',
   SuperSummer: 'Super Summer',
   JulyTopUp: 'July full value bonus rebate',
-  SuperAgentBonus: 'Summer Agent Bonus Overtime Rebate'
+  SuperAgentBonus: 'Summer Agent Bonus Overtime Rebate',
+  AugustTopUp: 'Rebate On First Time Top-Up in August'
 };
