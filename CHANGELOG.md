@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/wolfzxcv/official-site-ib/compare/v1.5.1...v1.6.0) (2022-07-29)
+
+
+### Features
+
+* **activity:** add WCGBY ([9d132b8](https://github.com/wolfzxcv/official-site-ib/commit/9d132b8a51bcdd794b676cec3e9437e1600beb49))
+
 ### [1.5.1](https://github.com/wolfzxcv/official-site-ib/compare/v1.5.0...v1.5.1) (2022-07-27)
 
 ## [1.5.0](https://github.com/wolfzxcv/official-site-ib/compare/v1.4.23...v1.5.0) (2022-07-26)
